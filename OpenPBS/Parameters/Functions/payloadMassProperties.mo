@@ -35,6 +35,6 @@ algorithm
   end if;
 
   annotation (Documentation(info="<html>
-<p><img src=\"modelica://OpenPBS/illustrations/payload.png\"/></p>
+<p><img src=\"modelica://OpenPBS/Resources/illustrations/payload.png\"/></p>
 </html>"));
 end payloadMassProperties;
