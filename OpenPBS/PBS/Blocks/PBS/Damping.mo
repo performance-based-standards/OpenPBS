@@ -17,8 +17,10 @@ model Damping
     "Lateral acceleration or yaw rate"
     annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
 equation
+  when {der(motion[end])<0 and motion[end]>0.001} then
     for i in 1:npeaks loop
       if i==pre(ipeak) then
+        peaks[i] = motion[end];
       else
         peaks[i] = pre(peaks[i]);
       end if;
