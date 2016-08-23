@@ -6,14 +6,14 @@ block RearWardAmplification
   Modelica.SIunits.AngularVelocity peak_last(start=0);
 
   Modelica.Blocks.Interfaces.RealOutput RWA "Rearward amplification"
-    annotation (Placement(transformation(extent={{100,30},{140,70}})));
+    annotation (Placement(transformation(extent={{100,40},{120,60}})));
 
   Modelica.Blocks.Interfaces.RealInput motion[nu]
     "Lateral acceleration or yaw rate"
     annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
   Modelica.Blocks.Interfaces.BooleanOutput valid
     "True if RWA was successfully calculated"
-    annotation (Placement(transformation(extent={{100,-70},{140,-30}})));
+    annotation (Placement(transformation(extent={{100,-60},{120,-40}})));
 equation
   RWA=if peak_first > 0 then peak_last/peak_first else -1.0;
 
