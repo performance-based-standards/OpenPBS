@@ -20,7 +20,7 @@ model RearWardAmplification
   Modelica.SIunits.AngularVelocity abs_wz_last=abs(vehicle.wz_out[vehicle.nu]);
 
   Modelica.Blocks.Interfaces.RealOutput RWA "Rearward amplification"
-    annotation (Placement(transformation(extent={{100,70},{120,90}})));
+    annotation (Placement(transformation(extent={{100,-10},{120,10}})));
 
   inner replaceable parameter Parameters.Base.VehicleModel
                                        paramSet constrainedby
@@ -28,11 +28,6 @@ model RearWardAmplification
   Modelica.Blocks.Interfaces.BooleanOutput valid
     "True if RWA was successfully calculated"
     annotation (Placement(transformation(extent={{100,-90},{120,-70}})));
-  Modelica.Blocks.Interfaces.RealOutput HSTO
-    "High speed transient off-tracking"
-    annotation (Placement(transformation(extent={{100,20},{120,40}})));
-  Modelica.Blocks.Interfaces.RealOutput YD "Yaw damping"
-    annotation (Placement(transformation(extent={{100,-40},{120,-20}})));
 equation
 
   RWA=if wz_peak_first>0 then wz_peak_last/wz_peak_first else -1.0;

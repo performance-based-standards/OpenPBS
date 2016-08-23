@@ -78,6 +78,6 @@ record UnitSpecification
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)),
     Documentation(info="<html>
-<p><img src=\"modelica://OpenPBS/illustrations/vehiclespec.png\"/></p>
+<p><img src=\"modelica://OpenPBS/Resources/illustrations/vehiclespec.png\"/></p>
 </html>"));
 end UnitSpecification;
