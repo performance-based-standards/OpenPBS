@@ -55,6 +55,8 @@ record UnitSpecification
   parameter Modelica.SIunits.Position cg_z_location_unloaded
     "C.g. height of unloaded vehicle, relative to ground";
 
+  parameter Modelica.SIunits.Length front_overhang "Främre överhäng";
+
   // Tire data
   parameter Real cornering_coefficient=5.5
     "Cornering coefficient: C_alpha/Fz";

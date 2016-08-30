@@ -5,6 +5,7 @@ model Damping
   Modelica.Blocks.Interfaces.RealOutput D "Damping"
     annotation (Placement(transformation(extent={{100,40},{120,60}})));
   parameter Integer npeaks=3;
+  parameter Modelica.SIunits.Time start_time=0;
   Real peaks[npeaks](start=zeros(npeaks));
   //Modelica.SIunits.Time t_peaks[npeaks](start=zeros(npeaks));
 
@@ -17,15 +18,17 @@ model Damping
   Modelica.Blocks.Interfaces.RealInput motion[nu]
     "Lateral acceleration or yaw rate"
     annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
+  Modelica.Blocks.Logical.ZeroCrossing zeroCrossing(u=der(motion[end]),enable=time>start_time);
+
 equation
-  when {der(motion[end])<0 and motion[end]>0.001} then
-    for i in 1:npeaks loop
-      if i==pre(ipeak) then
-        peaks[i] = motion[end];
-      else
-        peaks[i] = pre(peaks[i]);
-      end if;
-    end for;
+  when {zeroCrossing.y} then
+      for i in 1:npeaks loop
+        if (i==pre(ipeak)) then
+          peaks[i] = abs(motion[end]);
+        else
+          peaks[i] = pre(peaks[i]);
+        end if;
+      end for;
     ipeak=pre(ipeak)+1;
   end when;
   if peaks[1] > 0 and peaks[end] > 0 then
