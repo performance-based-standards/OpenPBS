@@ -1,5 +1,6 @@
 within OpenPBS.PBS.Blocks.PBS;
 model Damping
+  extends Modelica.Blocks.Icons.Block;
   parameter Integer nu=2;
   Modelica.Blocks.Interfaces.RealOutput D "Damping"
     annotation (Placement(transformation(extent={{100,40},{120,60}})));
