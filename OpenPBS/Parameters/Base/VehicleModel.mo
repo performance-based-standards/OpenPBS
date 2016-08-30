@@ -26,7 +26,7 @@ record VehicleModel "Base vehicle model parameter set"
   parameter Modelica.SIunits.Mass[nu] m={10000,10000} "Masses";
   parameter Modelica.SIunits.Inertia[nu] I={10000,10000} "Inertias";
 
-  parameter Integer[nu,na] axlegroups=[1,1,1;1,1,1];
+  parameter Integer[nu,na] axlegroups=[1,2,2;1,1,1];
 
 // Beräknade indata
 // Axel/boggitryck i kopplad kombination - Beräknas i simulering, VerticalForces
