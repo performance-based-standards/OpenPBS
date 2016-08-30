@@ -75,6 +75,9 @@ equation
         points={{58,-20},{26,-20},{-6,-20},{-6,-8},{-1,-8}}, color={0,0,127}));
   connect(highSpeedTransientOfftracking.HSTO, HSTO)
     annotation (Line(points={{81,-20},{110,-20}}, color={0,0,127}));
-  annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
+  annotation (Icon(coordinateSystem(preserveAspectRatio=false), graphics={
+          Bitmap(extent={{-100,-100},{100,100}}, fileName=
+              "modelica://OpenPBS/Resources/illustrations/SingleLaneChange.png")}),
+                                                                 Diagram(
         coordinateSystem(preserveAspectRatio=false)));
 end SingleLaneChange;
