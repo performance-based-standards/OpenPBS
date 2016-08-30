@@ -36,6 +36,13 @@ model SingleLaneChange
   Modelica.Blocks.Interfaces.BooleanOutput valid
     "True if calculations were completed"
     annotation (Placement(transformation(extent={{100,-80},{120,-60}})));
+  Blocks.PBS.HighSpeedTransientOfftracking highSpeedTransientOfftracking(
+    nu=paramSet.nu,
+    na=paramSet.na,
+    width=width)
+    annotation (Placement(transformation(extent={{60,-30},{80,-10}})));
+  Modelica.Blocks.Interfaces.RealOutput HSTO
+    annotation (Placement(transformation(extent={{100,-30},{120,-10}})));
 equation
   connect(vehicle.delta_in,inverseBlockConstraints. y2)
     annotation (Line(points={{22,6},{26,6},{26,0},{27,0}}, color={0,0,127}));
@@ -63,6 +70,10 @@ equation
           {54,-78},{46,-78},{46,65},{41,65}}, color={255,0,255}));
   connect(and1.y, valid)
     annotation (Line(points={{81,-70},{110,-70}}, color={255,0,255}));
+  connect(highSpeedTransientOfftracking.ry, vehicle.ry_out) annotation (Line(
+        points={{58,-20},{26,-20},{-6,-20},{-6,-8},{-1,-8}}, color={0,0,127}));
+  connect(highSpeedTransientOfftracking.HSTO, HSTO)
+    annotation (Line(points={{81,-20},{110,-20}}, color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)));
 end SingleLaneChange;

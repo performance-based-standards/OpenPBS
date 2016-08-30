@@ -1,5 +1,6 @@
 within OpenPBS.PBS.Blocks.PBS;
 block RearWardAmplification
+  extends Modelica.Blocks.Icons.Block;
   parameter Integer nu=2 "Number of units";
 
   Modelica.SIunits.AngularVelocity peak_first(start=0);

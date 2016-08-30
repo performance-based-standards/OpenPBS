@@ -48,14 +48,14 @@ Real[nu,na] C=paramSet.Cc.*verticalForces.Fz
     input Modelica.Blocks.Interfaces.RealInput vx_in
     "First unit velocity input" annotation (Placement(transformation(extent={{-140,-80},{-100,-40}})));
   /* Outputs */
-   Modelica.Blocks.Interfaces.RealOutput vx_out[nu]=vx annotation (Placement(transformation(extent={{100,50},
-            {120,70}})));
-   Modelica.Blocks.Interfaces.RealOutput vy_out[nu]=vy annotation (Placement(transformation(extent={{100,10},
-            {120,30}})));
-   Modelica.Blocks.Interfaces.RealOutput wz_out[nu]=wz annotation (Placement(transformation(extent={{100,-30},
-            {120,-10}})));
-   Modelica.Blocks.Interfaces.RealOutput ay_out[nu,na] = matrix(d_vy)*ones(1,na)+Lcog.*(matrix(d_wz)*ones(1,na))+(matrix(wz)*ones(1,na)).*(matrix(vx)*ones(1,na)) annotation (Placement(transformation(extent={{100,-70},
-            {120,-50}})));
+   Modelica.Blocks.Interfaces.RealOutput vx_out[nu]=vx annotation (Placement(transformation(extent={{100,70},
+            {120,90}})));
+   Modelica.Blocks.Interfaces.RealOutput vy_out[nu]=vy annotation (Placement(transformation(extent={{100,30},
+            {120,50}})));
+   Modelica.Blocks.Interfaces.RealOutput wz_out[nu]=wz annotation (Placement(transformation(extent={{100,-10},
+            {120,10}})));
+   Modelica.Blocks.Interfaces.RealOutput ay_out[nu,na] = matrix(d_vy)*ones(1,na)+Lcog.*(matrix(d_wz)*ones(1,na))+(matrix(wz)*ones(1,na)).*(matrix(vx)*ones(1,na)) annotation (Placement(transformation(extent={{100,-50},
+            {120,-30}})));
    Modelica.Blocks.Interfaces.RealOutput ry_out[nu,na]=ry
     annotation (Placement(transformation(extent={{100,-90},{120,-70}})));
 //    Modelica.Blocks.Interfaces.RealOutput front_direction = atan2(vy[1]+Lcog[1,1]*wz[1],vx[1])+pz[1]
