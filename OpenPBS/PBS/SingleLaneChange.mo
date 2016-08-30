@@ -1,5 +1,6 @@
 within OpenPBS.PBS;
 model SingleLaneChange
+  extends Modelica.Blocks.Icons.Block;
   parameter Modelica.SIunits.Frequency freqHz=0.4 "Frequency of lateral acceleration in ground coordinates";
   parameter Modelica.SIunits.Length width=4.5 "Width of lane change maneuver";
   parameter Modelica.SIunits.Velocity vx=80/3.6 "Longitudinal velocity";
@@ -61,9 +62,9 @@ equation
   connect(damping.D, YD) annotation (Line(points={{41,35},{80,35},{80,20},{110,20}},
         color={0,0,127}));
   connect(damping.motion, vehicle.wz_out) annotation (Line(points={{18,30},{4,30},
-          {-6,30},{-6,-2},{-1,-2}}, color={0,0,127}));
-  connect(rearWardAmplification.motion, vehicle.wz_out) annotation (Line(points=
-         {{18,70},{6,70},{-6,70},{-6,-2},{-1,-2}}, color={0,0,127}));
+          {-6,30},{-6,0},{-1,0}},   color={0,0,127}));
+  connect(rearWardAmplification.motion, vehicle.wz_out) annotation (Line(points={{18,70},
+          {6,70},{-6,70},{-6,0},{-1,0}},           color={0,0,127}));
   connect(and1.u1, damping.valid) annotation (Line(points={{58,-70},{54,-70},{50,
           -70},{50,25},{41,25}}, color={255,0,255}));
   connect(and1.u2, rearWardAmplification.valid) annotation (Line(points={{58,-78},
