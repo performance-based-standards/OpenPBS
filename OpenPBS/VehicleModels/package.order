@@ -3,3 +3,6 @@ SingleTrack
 DirectionInput
 VerticalForces
 Roll
+Longitudinal
+LongitudinalAccelerationQS
+LongitudinalAcceleration
