@@ -1,7 +1,7 @@
 within OpenPBS.VehicleModels;
 partial model Longitudinal
 
-  outer parameter Parameters.Base.VehicleModel paramSet
+  parameter Parameters.Base.VehicleModel paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 
    parameter Integer mode=1

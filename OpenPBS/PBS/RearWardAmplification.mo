@@ -1,7 +1,7 @@
 within OpenPBS.PBS;
 model RearWardAmplification
   //Single period sine for lateral acceleration
-  VehicleModels.SingleTrack vehicle
+  VehicleModels.SingleTrack vehicle(paramSet=paramSet)
     annotation (Placement(transformation(extent={{20,-10},{0,10}})));
   Blocks.SinglePeriodSine singlePeriodSine(
     amplitude=2,
@@ -49,7 +49,7 @@ equation
   connect(velocitySource.y, vehicle.vx_in) annotation (Line(points={{21,-30},{34,
           -30},{34,-6},{22,-6}}, color={0,0,127}));
   connect(vehicle.ay_out[1, 1], inverseBlockConstraints.u2)
-    annotation (Line(points={{-1,-6},{-1,0},{-6,0}},color={0,0,127}));
+    annotation (Line(points={{-1,-5},{-1,0},{-6,0}},color={0,0,127}));
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}})), Documentation(info="<html>
 <p><b>Rearward amplification</b> </p>

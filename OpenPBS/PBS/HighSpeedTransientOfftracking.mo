@@ -1,7 +1,7 @@
 within OpenPBS.PBS;
 model HighSpeedTransientOfftracking
   //Single period sine for lateral acceleration
-  VehicleModels.SingleTrack vehicle
+  VehicleModels.SingleTrack vehicle(paramSet=paramSet)
     annotation (Placement(transformation(extent={{20,-10},{0,10}})));
   Modelica.Blocks.Math.InverseBlockConstraints inverseBlockConstraints
     annotation (Placement(transformation(extent={{-10,-12},{30,12}})));

@@ -1,8 +1,12 @@
 within OpenPBS.VehicleModels;
 model DirectionInput
   "Single track model with direction of travel at front axle as input"
+  parameter Integer nu=2;
+  parameter Integer na=3;
 
-  VehicleModels.SingleTrack vehicle(mode=2)
+  VehicleModels.SingleTrack vehicle(            mode=2, paramSet=paramSet,
+    nu=nu,
+    na=na)
     annotation (Placement(transformation(extent={{40,-20},{20,0}})));
   Modelica.Blocks.Math.InverseBlockConstraints inverseBlockConstraints
     annotation (Placement(transformation(extent={{-34,52},{26,88}})));
@@ -20,7 +24,7 @@ model DirectionInput
   Components.MotionOffset motionOffset(y_offset=-paramSet.w[1, 1]/2,
       x_offset=vehicle.Lcog[1, 1])
     annotation (Placement(transformation(extent={{0,-20},{-20,0}})));
-  outer Parameters.Base.VehicleModel paramSet
+  parameter Parameters.Base.VehicleModel paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
   Modelica.Blocks.Sources.RealExpression realExpression2(y=vehicle.pz[1])
     annotation (Placement(transformation(extent={{-40,-44},{-60,-24}})));
@@ -39,11 +43,12 @@ equation
   connect(inverseBlockConstraints.y1, delta_out) annotation (Line(points={{27.5,70},
           {96,70},{96,0},{110,0}}, color={0,0,127}));
   connect(vehicle.vx_out[1], motionOffset.vx)
-    annotation (Line(points={{19,-4},{2,-4}}, color={0,0,127}));
-  connect(vehicle.vy_out[1], motionOffset.vy) annotation (Line(points={{19,
-          -8},{12,-8},{12,-10},{2,-10}}, color={0,0,127}));
-  connect(vehicle.wz_out[1], motionOffset.wz) annotation (Line(points={{19,
-          -12},{12,-12},{12,-16},{2,-16}}, color={0,0,127}));
+    annotation (Line(points={{19,-2},{10,-2},{10,-4},{2,-4}},
+                                              color={0,0,127}));
+  connect(vehicle.vy_out[1], motionOffset.vy) annotation (Line(points={{19,-6},
+          {12,-6},{12,-10},{2,-10}},     color={0,0,127}));
+  connect(vehicle.wz_out[1], motionOffset.wz) annotation (Line(points={{19,-10},
+          {12,-10},{12,-16},{2,-16}},      color={0,0,127}));
   connect(motionOffset.vy_offset, headingAngle.u1) annotation (Line(points=
           {{-22,-16},{-30,-16},{-30,-4},{-38,-4}}, color={0,0,127}));
   connect(motionOffset.vx_offset, headingAngle.u2) annotation (Line(points=

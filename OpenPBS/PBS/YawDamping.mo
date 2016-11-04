@@ -1,7 +1,7 @@
 within OpenPBS.PBS;
 model YawDamping
   //Single period sine for steering angle
-  VehicleModels.SingleTrack vehicle
+  VehicleModels.SingleTrack vehicle(paramSet=paramSet)
     annotation (Placement(transformation(extent={{-10,-10},{10,10}})));
   Blocks.SinglePeriodSine singlePeriodSine(
     amplitude=0.05,

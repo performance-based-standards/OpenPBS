@@ -1,7 +1,7 @@
 within OpenPBS.Parameters.Functions;
 function ModelParametersFromSpecification
   input Integer nu "Number of units";
-  //input Integer na "Number of axles (max over combination)";
+  input Integer na "Number of axles (max over combination)";
   input OpenPBS.Parameters.Base.UnitSpecification specification[nu];
 
   input Real[nu] weight_percentage=ones(nu)
@@ -18,7 +18,7 @@ protected
 algorithm
  // Code to find model parameters from vehicle specification
   modelparameters.nu:=nu;
-  //modelparameters.na:=na;
+  modelparameters.na:=na;
 
   for i in 1:nu loop
     modelparameters.L[i,:] :=axlePositions(specification[i].n_axles,  specification[i].wheelbase);
@@ -39,8 +39,8 @@ algorithm
     modelparameters.axlegroups[i,:]:=(specification[i].axle_groups);
 
   end for;
-  modelparameters.na:=size(modelparameters.L, 2);
-  annotation (Documentation(info="<html>
+//   modelparameters.na:=size(modelparameters.L, 2);
+  annotation (Inline=true,Documentation(info="<html>
 <p>erergAbce</p>
 </html>"));
 end ModelParametersFromSpecification;
