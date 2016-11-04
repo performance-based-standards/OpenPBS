@@ -1,6 +1,6 @@
 within OpenPBS.VehicleModels;
 model VerticalForces
-  outer parameter OpenPBS.Parameters.Base.VehicleModel paramSet;
+  parameter OpenPBS.Parameters.Base.VehicleModel paramSet;
   parameter Integer nu=paramSet.nu "Number of units";
   parameter Integer na=paramSet.na "Max number of axles per unit";
 
@@ -13,7 +13,7 @@ model VerticalForces
     "Front coupling position relative first axle";
   parameter Modelica.SIunits.Length[nu] B=paramSet.B
     "Rear coupling position relative first axle";
-  parameter Integer[nu,na] axlegroups=paramSet.axlegroups;
+  parameter Integer[nu,na] axlegroups=paramSet.axlegroups annotation(Evaluate=true);
 //   parameter Modelica.SIunits.TranslationalSpringConstant[nu,na] kz(start=paramSet.kz,fixed=false);
 
   final parameter Modelica.SIunits.Length[nu,na] Lcog = L-matrix(X)*ones(1,na)
@@ -25,11 +25,12 @@ model VerticalForces
   Modelica.SIunits.Force Fcz[nu-1] "Vertical force at couplings";
   Modelica.SIunits.Force fz_front[nu] "Vertical force of front axle groups";
   Modelica.SIunits.Force fz_rear[nu] "Vertical force of rear axle groups";
+
 equation
   for i in 1:nu loop
-    if max(axlegroups[i,:])<2 then
-      fz_rear[i]=0;
-    end if;
+     if max(axlegroups[i,:])<2 then
+       fz_rear[i]=0;
+     end if;
     for j in 1:na loop
       if axlegroups[i,j]==1 then
         Fz[i,j]=fz_front[i];
@@ -39,7 +40,6 @@ equation
         Fz[i,j]=1;
       end if;
     end for;
-
   end for;
 
   m*Modelica.Constants.g_n=vector(Fz*ones(na,1)-[matrix(Fcz);0]+[0;matrix(Fcz)]);
