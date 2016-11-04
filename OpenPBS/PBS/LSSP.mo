@@ -11,7 +11,10 @@ model LSSP
   Components.Curve90deg curve90deg[paramSet.nu,paramSet.na](radius=curve_radius,
       s_start=curve_start)
     annotation (Placement(transformation(extent={{10,-12},{-10,8}})));
-  VehicleModels.DirectionInput vehicle
+  VehicleModels.DirectionInput vehicle(
+    paramSet=paramSet,
+    nu=paramSet.nu,
+    na=paramSet.na)
     annotation (Placement(transformation(extent={{20,-70},{40,-50}})));
   inner replaceable parameter Parameters.Base.VehicleModel
                                        paramSet

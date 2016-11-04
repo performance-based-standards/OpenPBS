@@ -5,7 +5,7 @@ model SingleLaneChange
   parameter Modelica.SIunits.Length width=4.5 "Width of lane change maneuver";
   parameter Modelica.SIunits.Velocity vx=80/3.6 "Longitudinal velocity";
 
-  VehicleModels.SingleTrack vehicle
+  VehicleModels.SingleTrack vehicle(paramSet=paramSet)
     annotation (Placement(transformation(extent={{20,-10},{0,10}})));
   Modelica.Blocks.Math.InverseBlockConstraints inverseBlockConstraints
     annotation (Placement(transformation(extent={{-20,-12},{30,12}})));
@@ -20,7 +20,7 @@ model SingleLaneChange
     annotation (Placement(transformation(extent={{-20,-40},{-40,-20}})));
   Modelica.Blocks.Continuous.Der der2
     annotation (Placement(transformation(extent={{-48,-40},{-68,-20}})));
-  inner replaceable parameter Parameters.Variants.Adouble6x4
+  replaceable parameter       Parameters.Variants.Adouble6x4
                                        paramSet constrainedby
     Parameters.Base.VehicleModel                annotation (Placement(transformation(extent={{-100,80},
             {-80,100}})));
@@ -64,10 +64,11 @@ equation
           {62,74},{82,74},{82,60},{110,60}}, color={0,0,127}));
   connect(damping.D, YD) annotation (Line(points={{41,35},{80,35},{80,20},{110,20}},
         color={0,0,127}));
-  connect(damping.motion, vehicle.wz_out) annotation (Line(points={{18,30},{4,30},
-          {-6,30},{-6,0},{-1,0}},   color={0,0,127}));
+  connect(damping.motion, vehicle.wz_out) annotation (Line(points={{18,30},{4,
+          30},{-6,30},{-6,1.8},{-1,1.8}},
+                                    color={0,0,127}));
   connect(rearWardAmplification.motion, vehicle.wz_out) annotation (Line(points={{18,70},
-          {6,70},{-6,70},{-6,0},{-1,0}},           color={0,0,127}));
+          {6,70},{-6,70},{-6,1.8},{-1,1.8}},       color={0,0,127}));
   connect(and1.u1, damping.valid) annotation (Line(points={{58,-70},{54,-70},{50,
           -70},{50,25},{41,25}}, color={255,0,255}));
   connect(and1.u2, rearWardAmplification.valid) annotation (Line(points={{58,-78},

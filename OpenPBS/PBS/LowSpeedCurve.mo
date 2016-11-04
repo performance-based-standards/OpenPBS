@@ -2,49 +2,52 @@ within OpenPBS.PBS;
 model LowSpeedCurve
   extends Modelica.Blocks.Icons.Block;
 
+  parameter Integer nu=2 "Number of units";
+  parameter Integer na=3 "Number of axles (max across all units)";
+
   Modelica.Blocks.Interfaces.RealOutput LSSP "Low speed swept path"
     annotation (Placement(transformation(extent={{100,40},{120,60}})));
-  Components.PathPosition pathPositionRight[paramSet.nu,paramSet.na](n0=0, s0=
+  Components.PathPosition pathPositionRight[nu,na](n0=0, s0=
         vehicle.vehicle.rx0) "Path position of right side wheels"
     annotation (Placement(transformation(extent={{-24,-40},{-4,-20}})));
   Modelica.Blocks.Sources.Constant const(k=5)
     annotation (Placement(transformation(extent={{-80,-70},{-60,-50}})));
-  Components.Curve90deg curve90deg[paramSet.nu,paramSet.na](radius=curve_radius,
+  Components.Curve90deg curve90deg[nu,na](radius=curve_radius,
       s_start=curve_start)
     annotation (Placement(transformation(extent={{10,-12},{-10,8}})));
-  VehicleModels.DirectionInput vehicle
-    annotation (Placement(transformation(extent={{20,-70},{40,-50}})));
-  inner replaceable parameter Parameters.Variants.Adouble6x4
+  VehicleModels.DirectionInput vehicle(paramSet=paramSet)
+    annotation (Placement(transformation(extent={{20,-68},{40,-48}})));
+  replaceable parameter       Parameters.Variants.Adouble6x4
                                        paramSet constrainedby
     Parameters.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
-  Modelica.Blocks.Sources.RealExpression realExpression3[vehicle.vehicle.nu,
-    vehicle.vehicle.na](y=matrix(vehicle.vehicle.vy)*ones(1, vehicle.vehicle.na))
+  Modelica.Blocks.Sources.RealExpression realExpression3[nu,
+    na](y=matrix(vehicle.vehicle.vy)*ones(1, na))
     annotation (Placement(transformation(extent={{-100,40},{-80,60}})));
-  Modelica.Blocks.Sources.RealExpression realExpression4[vehicle.vehicle.nu,
-    vehicle.vehicle.na](y=matrix(vehicle.vehicle.pz)*ones(1, vehicle.vehicle.na))
+  Modelica.Blocks.Sources.RealExpression realExpression4[nu,
+    na](y=matrix(vehicle.vehicle.pz)*ones(1, na))
     annotation (Placement(transformation(extent={{-60,10},{-40,30}})));
-  Modelica.Blocks.Sources.RealExpression realExpression5[vehicle.vehicle.nu,
-    vehicle.vehicle.na](y=matrix(vehicle.vehicle.vx)*ones(1, paramSet.na))
+  Modelica.Blocks.Sources.RealExpression realExpression5[nu,
+    na](y=matrix(vehicle.vehicle.vx)*ones(1, na))
     annotation (Placement(transformation(extent={{-100,56},{-80,76}})));
-  Components.PathPosition pathPositionLeft[paramSet.nu,paramSet.na](s0=vehicle.vehicle.rx0,
+  Components.PathPosition pathPositionLeft[nu,na](s0=vehicle.vehicle.rx0,
       n0=paramSet.w) "Path position of left side wheels"
     annotation (Placement(transformation(extent={{-20,36},{0,56}})));
-  Components.Curve90deg curve90deg1[paramSet.nu,paramSet.na](radius=
+  Components.Curve90deg curve90deg1[nu,na](radius=
         curve_radius, s_start=curve_start)
     annotation (Placement(transformation(extent={{20,60},{0,80}})));
-  Components.MotionOffset motionOffsetLeft[paramSet.nu,paramSet.na](x_offset=
+  Components.MotionOffset motionOffsetLeft[nu,na](x_offset=
         vehicle.vehicle.Lcog, y_offset=paramSet.w/2)
     "Position and velocity of left wheels on all axles"
     annotation (Placement(transformation(extent={{-60,40},{-40,60}})));
-  Modelica.Blocks.Sources.RealExpression realExpression7[vehicle.vehicle.nu,
-    vehicle.vehicle.na](y=matrix(vehicle.vehicle.wz)*ones(1, vehicle.vehicle.na))
+  Modelica.Blocks.Sources.RealExpression realExpression7[nu,
+    na](y=matrix(vehicle.vehicle.wz)*ones(1, na))
     annotation (Placement(transformation(extent={{-100,24},{-80,44}})));
-  Components.MotionOffset motionOffsetRight[paramSet.nu,paramSet.na](x_offset=
+  Components.MotionOffset motionOffsetRight[nu,na](x_offset=
         vehicle.vehicle.Lcog, y_offset=-paramSet.w/2)
     "Position and velocity of right wheels on all axles"
     annotation (Placement(transformation(extent={{-60,-36},{-40,-16}})));
-  Blocks.RollingMax rollingMax(n1=vehicle.vehicle.nu, n2=vehicle.vehicle.na)
+  Blocks.RollingMax rollingMax(n1=nu, n2=na)
     "Maximum of all left wheel offsets"
     annotation (Placement(transformation(extent={{60,40},{80,60}})));
   parameter Modelica.SIunits.Length curve_radius=12.5;
@@ -57,9 +60,9 @@ model LowSpeedCurve
         curve_start + curve_radius*Modelica.Constants.pi/2)
     annotation (Placement(transformation(extent={{40,-40},{60,-20}})));
   Blocks.RollingMax rollingMax1(
-                               n1=vehicle.vehicle.nu, n2=vehicle.vehicle.na)
+                               n1=nu, n2=na)
     annotation (Placement(transformation(extent={{36,-10},{46,0}})));
-  Modelica.Blocks.Math.Gain gain[paramSet.nu,paramSet.na](k=-1) annotation (
+  Modelica.Blocks.Math.Gain gain[nu,na](k=-1) annotation (
      Placement(transformation(
         extent={{-4,-4},{4,4}},
         rotation=90,
@@ -73,8 +76,8 @@ equation
           {18,-23},{18,-2},{12,-2}},       color={0,0,127}));
   connect(curve90deg.y,pathPositionRight. c) annotation (Line(points={{-11,-2},
           {-11,-2},{-14,-2},{-14,-18}},       color={0,0,127}));
-  connect(vehicle.vx_in,const. y) annotation (Line(points={{18,-65},{10,-65},
-          {10,-62},{10,-60},{-59,-60}},
+  connect(vehicle.vx_in,const. y) annotation (Line(points={{18,-63},{10,-63},{
+          10,-62},{10,-60},{-59,-60}},
                                      color={0,0,127}));
   connect(pathPositionLeft.s_out, curve90deg1.u) annotation (Line(points={{1,53},{
           26,53},{26,70},{22,70}},             color={0,0,127}));
@@ -100,7 +103,7 @@ equation
   connect(rollingMax.y, LSSP) annotation (Line(points={{81,50},{81,50},{110,
           50}},           color={0,0,127}));
   connect(pathPositionRight[1, 1].pp_out, vehicle.front_direction_in)
-    annotation (Line(points={{-3,-37},{10,-37},{10,-44},{10,-55},{18,-55}},
+    annotation (Line(points={{-3,-37},{10,-37},{10,-44},{10,-53},{18,-53}},
         color={0,0,127}));
   connect(pathPositionRight.pz, realExpression4.y) annotation (Line(points={{-26,-36},
           {-30,-36},{-30,20},{-39,20}},      color={0,0,127}));

@@ -2,10 +2,10 @@ within OpenPBS.VehicleModels;
 model SingleTrack
   "Single-track model for lateral dynamics of articulated vehicles"
   /* All length parameters positive forward */
-  outer parameter Parameters.Base.VehicleModel paramSet
+  parameter Parameters.Base.VehicleModel paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 
-  OpenPBS.VehicleModels.VerticalForces verticalForces;
+  OpenPBS.VehicleModels.VerticalForces verticalForces(nu=nu,na=na,paramSet=paramSet);
 
   parameter Integer mode=1
     "1: Normal, 2: Non-inertial mode, no mass or inertia is considered, 3: Quasistatic, all derivatives are zero"
@@ -50,12 +50,14 @@ Real[nu,na] C=paramSet.Cc.*verticalForces.Fz
   /* Outputs */
    Modelica.Blocks.Interfaces.RealOutput vx_out[nu]=vx annotation (Placement(transformation(extent={{100,70},
             {120,90}})));
-   Modelica.Blocks.Interfaces.RealOutput vy_out[nu]=vy annotation (Placement(transformation(extent={{100,30},
-            {120,50}})));
-   Modelica.Blocks.Interfaces.RealOutput wz_out[nu]=wz annotation (Placement(transformation(extent={{100,-10},
-            {120,10}})));
-   Modelica.Blocks.Interfaces.RealOutput ay_out[nu,na] = matrix(d_vy)*ones(1,na)+Lcog.*(matrix(d_wz)*ones(1,na))+(matrix(wz)*ones(1,na)).*(matrix(vx)*ones(1,na)) annotation (Placement(transformation(extent={{100,-50},
-            {120,-30}})));
+   Modelica.Blocks.Interfaces.RealOutput vy_out[nu]=vy annotation (Placement(transformation(extent={{100,40},
+            {120,60}})));
+   Modelica.Blocks.Interfaces.RealOutput wz_out[nu]=wz annotation (Placement(transformation(extent={{100,8},
+            {120,28}})));
+   Modelica.Blocks.Interfaces.RealOutput ay_out[nu,na] = matrix(d_vy)*ones(1,na)+Lcog.*(matrix(d_wz)*ones(1,na))+(matrix(wz)*ones(1,na)).*(matrix(vx)*ones(1,na)) annotation (Placement(transformation(extent={{100,-60},
+            {120,-40}})));
+   Modelica.Blocks.Interfaces.RealOutput ax_out[nu,na] = matrix(d_vx)*ones(1,na)-(matrix(wz)*ones(1,na)).*((matrix(vy)*ones(1,na))+Lcog.*(matrix(wz)*ones(1,na))) annotation (Placement(transformation(extent={{100,-32},
+            {120,-12}})));
    Modelica.Blocks.Interfaces.RealOutput ry_out[nu,na]=ry
     annotation (Placement(transformation(extent={{100,-90},{120,-70}})));
 //    Modelica.Blocks.Interfaces.RealOutput front_direction = atan2(vy[1]+Lcog[1,1]*wz[1],vx[1])+pz[1]
