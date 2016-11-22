@@ -83,5 +83,8 @@ equation
           Bitmap(extent={{-100,-100},{100,100}}, fileName=
               "modelica://OpenPBS/Resources/illustrations/SingleLaneChange.png")}),
                                                                  Diagram(
-        coordinateSystem(preserveAspectRatio=false)));
+        coordinateSystem(preserveAspectRatio=false)),
+    Documentation(info="<html>
+<p><img src=\"modelica://OpenPBS/Resources/illustrations/HSTO_Description.png\"/></p>
+</html>"));
 end SingleLaneChange;
