@@ -2,7 +2,7 @@ within OpenPBS.PBS;
 model LowSpeedCurve
   extends Modelica.Blocks.Icons.Block;
 
-  parameter Integer nu=2 "Number of units";
+  parameter Integer nu=4 "Number of units";
   parameter Integer na=3 "Number of axles (max across all units)";
 
   Modelica.Blocks.Interfaces.RealOutput LSSP "Low speed swept path"
@@ -15,7 +15,9 @@ model LowSpeedCurve
   Components.Curve90deg curve90deg[nu,na](radius=curve_radius,
       s_start=curve_start)
     annotation (Placement(transformation(extent={{10,-12},{-10,8}})));
-  VehicleModels.DirectionInput vehicle(paramSet=paramSet)
+  VehicleModels.DirectionInput vehicle(paramSet=paramSet,
+    nu=nu,
+    na=na)
     annotation (Placement(transformation(extent={{20,-68},{40,-48}})));
   replaceable parameter       Parameters.Variants.Adouble6x4
                                        paramSet constrainedby
