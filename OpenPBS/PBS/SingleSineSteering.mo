@@ -3,7 +3,7 @@ model SingleSineSteering
   extends Modelica.Blocks.Icons.Block;
   parameter Modelica.SIunits.Frequency freqHz=0.4 "Frequency of lateral acceleration in ground coordinates";
   parameter Modelica.SIunits.Velocity vx=80/3.6 "Longitudinal velocity";
-  parameter Real amplitude=0.05 "Amplitude of sine wave";
+  parameter Real amplitude=0.050 "Amplitude of sine wave";
   VehicleModels.SingleTrack vehicle(paramSet=paramSet)
     annotation (Placement(transformation(extent={{-36,-10},{-16,10}})));
   Modelica.Blocks.Sources.Constant velocitySource(k=80/3.6)
