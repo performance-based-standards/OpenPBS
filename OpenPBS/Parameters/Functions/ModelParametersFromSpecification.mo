@@ -40,7 +40,7 @@ algorithm
 
   end for;
 //   modelparameters.na:=size(modelparameters.L, 2);
-  annotation (Inline=true,Documentation(info="<html>
+  annotation (Documentation(info="<html>
 <p>erergAbce</p>
 </html>"));
 end ModelParametersFromSpecification;

@@ -45,10 +45,10 @@ equation
   connect(vehicle.vx_out[1], motionOffset.vx)
     annotation (Line(points={{19,-2},{10,-2},{10,-4},{2,-4}},
                                               color={0,0,127}));
-  connect(vehicle.vy_out[1], motionOffset.vy) annotation (Line(points={{19,-6},
-          {12,-6},{12,-10},{2,-10}},     color={0,0,127}));
-  connect(vehicle.wz_out[1], motionOffset.wz) annotation (Line(points={{19,-10},
-          {12,-10},{12,-16},{2,-16}},      color={0,0,127}));
+  connect(vehicle.vy_out[1], motionOffset.vy) annotation (Line(points={{19,-5},
+          {12,-5},{12,-10},{2,-10}},     color={0,0,127}));
+  connect(vehicle.wz_out[1], motionOffset.wz) annotation (Line(points={{19,-8.2},
+          {12,-8.2},{12,-16},{2,-16}},     color={0,0,127}));
   connect(motionOffset.vy_offset, headingAngle.u1) annotation (Line(points=
           {{-22,-16},{-30,-16},{-30,-4},{-38,-4}}, color={0,0,127}));
   connect(motionOffset.vx_offset, headingAngle.u2) annotation (Line(points=
