@@ -151,6 +151,7 @@ equation
 </ul>
 <p><i><b><span style=\"font-size: 12pt; color: #ff0000;\">Present known issues with selected definition: </span></b></i></p>
 <ul>
+<li><i><span style=\"color: #ff0000;\">Low or high mu? What value if hi (1?), and if low (0.35?)</span></i></li>
 <li><i><span style=\"color: #ff0000;\">HCTinSWE and OpenPBS does not punish long overhang, e.g. city buses or &ldquo;nose-built&rdquo; cabins </span></i></li>
 <li><i><span style=\"color: #ff0000;\">OpenPBS presently does not saturate axle forces to mu_max*F_z. </span></i></li>
 </ul>
