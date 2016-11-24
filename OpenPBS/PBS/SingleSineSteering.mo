@@ -59,6 +59,10 @@ equation
                                                                  Diagram(
         coordinateSystem(preserveAspectRatio=false)),
     Documentation(info="<html>
-<p><img src=\"modelica://OpenPBS/Resources/illustrations/RWA_Description.png\"/><img src=\"modelica://OpenPBS/Resources/illustrations/YD_Description.png\"/></p>
+<p><b><span style=\"font-size: 20pt; color: #0000ff;\">RWA, Rearward Amplification</span></b></p>
+<p><img src=\"modelica://OpenPBS/Resources/illustrations/RWA_Description.png\"/></p>
+<h4><span style=\"color: #0000ff\">====================================================================================</span></h4>
+<p><b><span style=\"font-size: 20pt; color: #0000ff;\">YD, Yaw Damping</span></b></p>
+<p><img src=\"modelica://OpenPBS/Resources/illustrations/YD_Description.png\"/></p>
 </html>"));
 end SingleSineSteering;
