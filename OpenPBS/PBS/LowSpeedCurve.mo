@@ -1,4 +1,4 @@
-within OpenPBS.PBS;
+﻿within OpenPBS.PBS;
 model LowSpeedCurve
   extends Modelica.Blocks.Icons.Block;
 
@@ -132,5 +132,30 @@ equation
   connect(and1.y, valid) annotation (Line(points={{95,-16},{98,-16},{98,-40},
           {110,-40}}, color={255,0,255}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
-        coordinateSystem(preserveAspectRatio=false)));
+        coordinateSystem(preserveAspectRatio=false)),
+    Documentation(info="<html>
+<p><b><span style=\"font-size: 20pt; color: #0000ff;\">LSSP, Low Speed Swept Path</span></b></p>
+<p><b><span style=\"font-size: 12pt;\">Manoeuvre: </span></b></p>
+<ul>
+<li>Speed=0+</li>
+<li>Friction=High</li>
+<li>Unit loading=Max load, evenly distributed</li>
+<li>guide: R=12.5 m, 90 deg </li>
+</ul>
+<p><b><span style=\"font-size: 12pt;\">Measure: </span></b></p>
+<p>LSSP=Max perpendicular distance from guide to follower. </p>
+<p>Relevant alternatives and selection: </p>
+<ul>
+<li>guide=FAO, follower=worst of all other [HCTinSWE and OpenPBS] </li>
+<li>guide=FBO, follower=worst of all other [approx. Australia] </li>
+</ul>
+<p><i><b><span style=\"font-size: 12pt; color: #ff0000;\">Present known issues with selected definition: </span></b></i></p>
+<ul>
+<li><i><span style=\"color: #ff0000;\">Low or high mu? What value if hi (1?), and if low (0.35?)</span></i></li>
+<li><i><span style=\"color: #ff0000;\">HCTinSWE and OpenPBS does not punish long overhang, e.g. city buses or &ldquo;nose-built&rdquo; cabins </span></i></li>
+<li><i><span style=\"color: #ff0000;\">OpenPBS presently does not saturate axle forces to mu_max*F_z. </span></i></li>
+</ul>
+<p><img src=\"modelica://OpenPBS/Resources/illustrations/LSSP_Description.png\"/></p>
+<p>￼</p>
+</html>"));
 end LowSpeedCurve;
