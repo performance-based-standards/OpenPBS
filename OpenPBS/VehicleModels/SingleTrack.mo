@@ -29,6 +29,10 @@ parameter Modelica.SIunits.Length[nu] A=paramSet.A
     "Front coupling position relative first axle";
 parameter Modelica.SIunits.Length[nu] B=paramSet.B
     "Rear coupling position relative first axle";
+    parameter Modelica.SIunits.Length[nu] FOH=paramSet.FOH
+    "Front overhang relative first axle of each unit";
+     parameter Modelica.SIunits.Length[nu] ROH=paramSet.ROH
+    "Front overhang relative first axle of each unit";
 
 parameter Boolean[nu,na] driven=paramSet.driven;
 
@@ -115,6 +119,14 @@ Real[nu,na] C=paramSet.Cc.*verticalForces.Fz
   parameter Modelica.SIunits.Position[nu,na] rx0=TM*[0;matrix(B[1:nu-1]-A[2:nu])]*ones(1,na)+L;
   parameter Integer TM[nu,nu]=Functions.tril(nu);
 
+  /*Initial coordinates for the over hang. Assume straight starting position. */
+
+   //Modelica.SIunits.Length[nu] rx01=rx0[:,1];
+
+  parameter Modelica.SIunits.Length[nu,2] rx0_oh=cat(2,matrix(rx0[:,1]+FOH),matrix(rx0[:,1]+ROH))
+  "Initial position in x-dir of overhang. Front in first colume rear in second. Resolved from first units first axle";
+  parameter Modelica.SIunits.Length[nu,2] Lcog_oh=cat(2,matrix(FOH-X),matrix(ROH-X))
+                                                                    "Position of overhang in x-dir from cog, one row for each unit";
     Modelica.SIunits.Position[nu,na] rx(start=rx0);
     Modelica.SIunits.Position[nu,na] ry(start=zeros(nu,na));
     Modelica.SIunits.Angle[nu] pz;
