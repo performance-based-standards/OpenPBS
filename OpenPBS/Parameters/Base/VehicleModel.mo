@@ -28,6 +28,11 @@ record VehicleModel "Base vehicle model parameter set"
 
   parameter Integer[nu,na] axlegroups=[1,2,2;1,1,1];
 
+  parameter Modelica.SIunits.Length[nu] FOH={1,1}
+                                            "Front hang define from the front axle of each unit.";
+  parameter Modelica.SIunits.Length[nu] ROH={-5,-5}
+                                            "Rear hang define from the front axle of each unit.";
+
 // Beräknade indata
 // Axel/boggitryck i kopplad kombination - Beräknas i simulering, VerticalForces
 // Kopplingstryck - Beräknas i simulering, VerticalForces
