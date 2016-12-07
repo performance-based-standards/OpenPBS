@@ -2,12 +2,15 @@ within OpenPBS.VehicleModels;
 model LongitudinalAccelerationQS
   "Use max thrust force distributed on driving axles and solve for the highest inclination angle where the desired acceleration can be achieved"
   extends Longitudinal(mode=2, inclination_angle(fixed=false,start=0));
-
+ replaceable parameter       Parameters.Variants.Adouble6x4
+                                       paramSet constrainedby
+    Parameters.Base.VehicleModel                annotation (Placement(transformation(extent={{-100,80},
+            {-80,100}})));
   /* Tire forces */
   Modelica.SIunits.Force Fxd(min=0) "Drive force (applied to each driven axle)";
 
-  parameter Modelica.SIunits.Acceleration acceleration_demand=0 "Required acceleration";
-  parameter Modelica.SIunits.Force max_thrust_force_vx0=20000;
+  parameter Modelica.SIunits.Acceleration acceleration_demand=0.02 "Required acceleration";
+  parameter Modelica.SIunits.Force max_thrust_force_vx0=175000;
 initial equation
 //      for i in 1:nu loop
 //        for j in 1:na loop

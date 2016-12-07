@@ -1,8 +1,10 @@
 within OpenPBS.VehicleModels;
 partial model Longitudinal
 
-  parameter Parameters.Base.VehicleModel paramSet
-    annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
+   replaceable parameter       Parameters.Variants.Adouble6x4
+                                       paramSet constrainedby
+    Parameters.Base.VehicleModel                annotation (Placement(transformation(extent={{-100,80},
+            {-80,100}})));
 
    parameter Integer mode=1
     "1: Normal, 2: Quasistatic"
