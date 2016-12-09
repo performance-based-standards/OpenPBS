@@ -5,7 +5,7 @@ block RollingMax "Find max value of n signals during simulation"
   parameter Integer n2=1 "Number of columns in input matrix";
 
   Real[n1,n2] umax;
-  Modelica.Blocks.Interfaces.RealInput u[n1,n2]
+  Modelica.Blocks.Interfaces.RealInput u[n1,n2](stateSelect=StateSelect.never)
     annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
   Modelica.Blocks.Interfaces.RealOutput y
     annotation (Placement(transformation(extent={{100,-10},{120,10}})));

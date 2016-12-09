@@ -132,6 +132,9 @@ Real[nu,na] C=paramSet.Cc.*verticalForces.Fz
     Modelica.SIunits.Position[nu,na] ry(start=zeros(nu,na));
     Modelica.SIunits.Angle[nu] pz;
 
+    /*Friction usage. One element for each axle*/
+    output Real[nu,na] friction_usage=sqrt(Fx.^2+Fy.^2)./verticalForces.Fz;
+
 equation
     if mode==1 then
         d_vx=der(vx);
