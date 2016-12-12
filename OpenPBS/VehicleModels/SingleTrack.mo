@@ -33,7 +33,7 @@ parameter Modelica.SIunits.Length[nu] B=paramSet.B
     "Front overhang relative first axle of each unit";
      parameter Modelica.SIunits.Length[nu] ROH=paramSet.ROH
     "Front overhang relative first axle of each unit";
-    parameter Modelica.SIunits.Angle phi=0 "Lateral road inclination";
+  parameter Modelica.SIunits.Angle inclination=0 "Lateral road inclination";
 
 parameter Boolean[nu,na] driven=paramSet.driven;
 
@@ -191,7 +191,7 @@ end for;
   Fyw = -C.*alpha;
 
   Fx = Fxw.*cos(delta)-Fyw.*sin(delta);
-  Fy = Fxw.*sin(delta)+Fyw.*cos(delta)-sin(phi)*verticalForces.Fz;
+  Fy =Fxw .* sin(delta) + Fyw .* cos(delta) - sin(inclination)*verticalForces.Fz;
 
 /* Kinematic constraints in couplings */
 for i in 1:nu-1 loop

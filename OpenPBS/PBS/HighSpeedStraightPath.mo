@@ -9,42 +9,37 @@ model HighSpeedStraightPath
                                        paramSet constrainedby
     Parameters.Base.VehicleModel                annotation (Placement(transformation(extent={{-100,80},
             {-80,100}})));
-  VehicleModels.SingleTrack vehicle(paramSet=paramSet,
-    mode=1,
-    phi=0.17453292519943)
-    annotation (Placement(transformation(extent={{30,2},{10,22}})));
+  VehicleModels.SingleTrack vehicle(
+    paramSet=paramSet,
+    inclination=inclination,
+    mode=1) annotation (Placement(transformation(extent={{26,0},{6,20}})));
 
   Modelica.Blocks.Math.InverseBlockConstraints inverseBlockConstraints
     annotation (Placement(transformation(extent={{-10,-2},{40,22}})));
   Modelica.Blocks.Sources.Constant velocitySource(k=velocity)
     annotation (Placement(transformation(extent={{10,-40},{30,-20}})));
-  Modelica.Blocks.Continuous.Der der1
-    annotation (Placement(transformation(extent={{-10,-30},{-30,-10}})));
-  Modelica.Blocks.Continuous.Der der2
-    annotation (Placement(transformation(extent={{-38,-30},{-58,-10}})));
   Modelica.Blocks.Sources.Constant const(k=0)
     annotation (Placement(transformation(extent={{-96,2},{-76,22}})));
-  Modelica.Blocks.Interfaces.RealOutput rearSlack
-    annotation (Placement(transformation(extent={{100,-8},{120,12}})));
-  Modelica.Blocks.Sources.RealExpression absolutValueRearSlack(y=sqrt(vehicle.ry_out[
-        nu, na]^2))
-    annotation (Placement(transformation(extent={{56,-8},{76,12}})));
+  Modelica.Blocks.Interfaces.RealOutput TASP
+    "Swept area when driving on constant crossfall"
+    annotation (Placement(transformation(extent={{100,-10},{120,10}})));
+  parameter Modelica.SIunits.Angle inclination=0.05 "Lateral road inclination";
+  Modelica.Blocks.Math.Abs abs1
+    annotation (Placement(transformation(extent={{64,-10},{84,10}})));
 equation
   connect(vehicle.delta_in,inverseBlockConstraints. y2)
-    annotation (Line(points={{32,18},{36,18},{36,10},{36.25,10}},
+    annotation (Line(points={{28,16},{36,16},{36,10},{36.25,10}},
                                                            color={0,0,127}));
   connect(velocitySource.y,vehicle. vx_in) annotation (Line(points={{31,-30},{44,
-          -30},{44,6},{32,6}},   color={0,0,127}));
-  connect(der1.u,vehicle. ry_out[1, 1]) annotation (Line(points={{-8,-20},{4,-20},
-          {4,4},{9,4}},              color={0,0,127}));
-  connect(der2.u,der1. y) annotation (Line(points={{-36,-20},{-31,-20}},
-                 color={0,0,127}));
-  connect(der2.y,inverseBlockConstraints. u2) annotation (Line(points={{-59,-20},
-          {-64,-20},{-64,6},{-5,6},{-5,10}},       color={0,0,127}));
+          -30},{44,4},{28,4}},   color={0,0,127}));
   connect(const.y, inverseBlockConstraints.u1) annotation (Line(points={{-75,12},
           {-44,12},{-44,10},{-12.5,10}}, color={0,0,127}));
-  connect(absolutValueRearSlack.y, rearSlack)
-    annotation (Line(points={{77,2},{96,2},{110,2}}, color={0,0,127}));
+  connect(vehicle.ry_out[1, 1], inverseBlockConstraints.u2)
+    annotation (Line(points={{5,2},{0,2},{0,10},{-5,10}}, color={0,0,127}));
+  connect(abs1.y, TASP)
+    annotation (Line(points={{85,0},{92,0},{110,0}}, color={0,0,127}));
+  connect(abs1.u, vehicle.ry_out[nu, na]) annotation (Line(points={{62,0},{50,0},{
+          50,-12},{0,-12},{0,2},{5,2}}, color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false), graphics={Text(
           extent={{-36,60},{34,38}},
