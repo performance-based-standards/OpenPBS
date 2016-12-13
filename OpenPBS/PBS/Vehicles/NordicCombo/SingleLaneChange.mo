@@ -1,4 +1,4 @@
-within OpenPBS.PBS.Variants.NordicCombo;
+within OpenPBS.PBS.Vehicles.NordicCombo;
 model SingleLaneChange
   import OpenPBS;
   extends OpenPBS.PBS.SingleLaneChange(redeclare
