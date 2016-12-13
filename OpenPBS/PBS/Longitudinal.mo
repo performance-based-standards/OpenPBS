@@ -17,16 +17,21 @@ model Longitudinal
     annotation (Placement(transformation(extent={{100,20},{120,40}})));
   Modelica.Blocks.Interfaces.RealOutput AC "Acceleration capability"
     annotation (Placement(transformation(extent={{100,-40},{120,-20}})));
-  VehicleModels.LongitudinalAccelerationQS startability(paramSet=paramSet,
-      acceleration_demand=acceleration_demand)
+  VehicleModels.LongitudinalAccelerationQS startability(
+    paramSet=paramSet,
+    acceleration_demand=acceleration_demand,
+    friction=friction)
     annotation (Placement(transformation(extent={{-20,60},{0,80}})));
   VehicleModels.LongitudinalAccelerationQS gradeability(
     acceleration_demand=0.001,
     paramSet=paramSet,
-    vx0=vx_gradeability)
+    vx0=vx_gradeability,
+    friction=friction)
     annotation (Placement(transformation(extent={{-20,20},{0,40}})));
-  VehicleModels.LongitudinalAcceleration longitudinalAcceleration(vx0=0,
-      paramSet=paramSet)
+  VehicleModels.LongitudinalAcceleration longitudinalAcceleration(
+    vx0=0,
+    paramSet=paramSet,
+    friction=friction)
     annotation (Placement(transformation(extent={{-70,-50},{-50,-30}})));
   parameter Modelica.SIunits.Acceleration acceleration_demand=0.001
     "Required acceleration for startability and gradeability";
@@ -47,6 +52,7 @@ model Longitudinal
     annotation (Placement(transformation(extent={{70,-40},{90,-20}})));
   parameter Modelica.SIunits.Velocity vx_gradeability=15
     "Longitudinal velocity for gradeability calculation";
+  parameter Real friction=1 "Road friction coefficient";
 equation
   connect(startability.inclination_out, S) annotation (Line(points={{1,70},{1,
           70},{58,70},{110,70}}, color={0,0,127}));
