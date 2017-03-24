@@ -4,7 +4,7 @@ model Longitudinal
 
   parameter Integer nu=paramSet.nu;
   parameter Integer na=paramSet.na;
-  replaceable parameter       Parameters.Variants.Adouble6x4
+  replaceable parameter     Parameters.Vehicles.Adouble6x4
                                        paramSet constrainedby
     Parameters.Base.VehicleModel                annotation (Placement(transformation(extent={{-100,80},
             {-80,100}})));
