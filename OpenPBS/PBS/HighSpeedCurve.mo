@@ -1,7 +1,7 @@
 within OpenPBS.PBS;
 model HighSpeedCurve
   extends Modelica.Blocks.Icons.Block;
-  replaceable parameter       Parameters.Variants.Adouble6x4
+  replaceable parameter       Parameters.Vehicles.Adouble6x4
                                        paramSet constrainedby
     OpenPBS.Parameters.Base.VehicleModel              annotation (Placement(transformation(extent={{-100,80},
             {-80,100}})));
