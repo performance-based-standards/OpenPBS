@@ -19,7 +19,7 @@ model LowSpeedCurve
     nu=nu,
     na=na)
     annotation (Placement(transformation(extent={{20,-52},{40,-32}})));
-  replaceable parameter       Parameters.Variants.Adouble6x4
+  replaceable parameter       Parameters.Vehicles.Adouble6x4
                                        paramSet constrainedby
     Parameters.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));

@@ -20,7 +20,7 @@ model SingleLaneChange
     annotation (Placement(transformation(extent={{-20,-40},{-40,-20}})));
   Modelica.Blocks.Continuous.Der der2
     annotation (Placement(transformation(extent={{-48,-40},{-68,-20}})));
-  replaceable parameter       Parameters.Variants.Adouble6x4
+  replaceable parameter       Parameters.Vehicles.Adouble6x4
                                        paramSet constrainedby
     Parameters.Base.VehicleModel                annotation (Placement(transformation(extent={{-100,80},
             {-80,100}})));
