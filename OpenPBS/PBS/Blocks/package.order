@@ -1,4 +1,7 @@
+PBS
 SinglePeriodSine
 RollingMax
 Curvature
-PBS
+InstantMax
+booleanToInteger
+MaxFrictionUsage

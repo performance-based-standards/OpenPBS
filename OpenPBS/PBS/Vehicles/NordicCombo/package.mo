@@ -1,4 +1,4 @@
-within OpenPBS.PBS.Variants;
+within OpenPBS.PBS.Vehicles;
 package NordicCombo
 
 

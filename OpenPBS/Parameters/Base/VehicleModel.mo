@@ -28,7 +28,23 @@ record VehicleModel "Base vehicle model parameter set"
 
   parameter Integer[nu,na] axlegroups=[1,2,2;1,1,1];
 
-// Beräknade indata
+  parameter Modelica.SIunits.Length[nu] FOH={1,1}
+                                            "Front hang define from the front axle of each unit.";
+  parameter Modelica.SIunits.Length[nu] ROH={-5,-5}
+                                            "Rear hang define from the front axle of each unit.";
+  parameter Real drag_coefficient=0.5;
+  parameter Modelica.SIunits.Area frontal_area=4;
+  parameter Real rolling_resistance_coefficient=0.0004 "Rolling resistance force as a function of vertical force";
+  parameter Modelica.SIunits.Power max_engine_power=550000;
+  parameter Modelica.SIunits.Force max_thrust_force_vx0=175000;
+  annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
+        coordinateSystem(preserveAspectRatio=false)),
+    Documentation(info="<html>
+
+</html>"));
+
+
+  // Beräknade indata
 // Axel/boggitryck i kopplad kombination - Beräknas i simulering, VerticalForces
 // Kopplingstryck - Beräknas i simulering, VerticalForces
 // Tyngdpunktshöjd - cgh
@@ -44,9 +60,4 @@ record VehicleModel "Base vehicle model parameter set"
 // Axelposition rel. axel 1 - L
 // Modifieringsfaktor
 
-  annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
-        coordinateSystem(preserveAspectRatio=false)),
-    Documentation(info="<html>
-
-</html>"));
 end VehicleModel;
