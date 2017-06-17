@@ -3,6 +3,7 @@ Vehicles
 SingleLaneChange
 SingleSineSteering
 LowSpeedCurve
+LowSpeedCurve_SaturatedTyre
 HighSpeedCurve
 SteadyStateRollOver
 HighSpeedStraightPath

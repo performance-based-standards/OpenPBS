@@ -1,5 +1,5 @@
 ﻿within OpenPBS.PBS;
-model LowSpeedCurve
+model LowSpeedCurve_SaturatedTyre
   extends Modelica.Blocks.Icons.Block;
 
   parameter Integer nu=4 "Number of units";
@@ -15,9 +15,11 @@ model LowSpeedCurve
   Components.Curve90deg curve90deg[nu,na](radius=curve_radius,
       s_start=curve_start)
     annotation (Placement(transformation(extent={{10,4},{-10,24}})));
-  VehicleModels.DirectionInput vehicle(paramSet=paramSet,
+  VehicleModels.DirectionInput_SaturatedTyre
+                               vehicle(paramSet=paramSet,
     nu=nu,
-    na=na)
+    na=na,
+    mu=0.3)
     annotation (Placement(transformation(extent={{20,-52},{40,-32}})));
   replaceable parameter       Parameters.Vehicles.Adouble6x4
                                        paramSet constrainedby
@@ -118,15 +120,15 @@ model LowSpeedCurve
     annotation (Placement(transformation(extent={{100,-72},{120,-52}})));
   Modelica.Blocks.Interfaces.RealOutput RS "Rear swing(rigth side)"
     annotation (Placement(transformation(extent={{100,-92},{120,-72}})));
-  Blocks.PBS.FrictionDemand frictionDemand(
+  Blocks.PBS.FrictionDemand_New
+                            frictionDemand(
     nu=nu,
     na=na,
-    driven=paramSet.driven,
-    max_friction=max_friction)
+    driven=paramSet.driven)
     annotation (Placement(transformation(extent={{40,28},{60,48}})));
   Modelica.Blocks.Sources.RealExpression realExpression1[nu,
     na](y=vehicle.vehicle.friction_usage)
-    annotation (Placement(transformation(extent={{10,28},{30,48}})));
+    annotation (Placement(transformation(extent={{4,28},{30,48}})));
   parameter Real max_friction=0.8
     "Maximum allowed friction (for friction demand calculation)";
   Modelica.Blocks.Interfaces.RealOutput FDST "Friction demand on steer tyres"
@@ -214,11 +216,12 @@ equation
   connect(gain1[:, 1].u,overHangCalculatorRigth [:, 1].n_out)
     annotation (Line(points={{52,-66.8},{52,-76},{45,-76}}, color={0,0,127}));
   connect(realExpression1.y, frictionDemand.friction_usage)
-    annotation (Line(points={{31,38},{38,38}}, color={0,0,127}));
+    annotation (Line(points={{31.3,38},{31.3,38},{38,38}},
+                                               color={0,0,127}));
   connect(frictionDemand.FDST, FDST) annotation (Line(points={{62,43},{82,43},{
           82,44},{110,44}}, color={0,0,127}));
-  connect(frictionDemand.FDDT, FDDT) annotation (Line(points={{62,33},{82,33},{
-          82,24},{110,24}},                 color={0,0,127}));
+  connect(frictionDemand.FDDT, FDDT) annotation (Line(points={{62,33},{82,33},{82,
+          24},{110,24}},                    color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)),
     Documentation(info="<html>
@@ -245,5 +248,6 @@ equation
 </ul>
 <p><img src=\"modelica://OpenPBS/Resources/illustrations/LSSP_Description.png\"/></p>
 <p>￼</p>
-</html>"));
-end LowSpeedCurve;
+</html>"),
+    experiment(StopTime=30));
+end LowSpeedCurve_SaturatedTyre;

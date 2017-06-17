@@ -19,7 +19,7 @@ model TestLowSpeedCurveFhRh "Test low speed curve with front and rear overhang"
     nu=nu,
     na=na)
     annotation (Placement(transformation(extent={{20,-68},{40,-48}})));
-  replaceable parameter       Parameters.Variants.Adouble6x4
+  replaceable parameter       Parameters.Vehicles.Adouble6x4
                                        paramSet constrainedby
     Parameters.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));

@@ -1,5 +1,5 @@
 within OpenPBS.VehicleModels;
-model SingleTrack
+model SingleTrack_SaturatedTyre
   "Single-track model for lateral dynamics of articulated vehicles"
   /* All length parameters positive forward */
   parameter Parameters.Base.VehicleModel paramSet
@@ -135,30 +135,23 @@ Real[nu,na] C=paramSet.Cc.*verticalForces.Fz
     /*Friction usage. One element for each axle*/
     output Real[nu,na] friction_usage=sqrt(Fx.^2+Fy.^2)./verticalForces.Fz;
 
+    parameter Real mu "Friction coefficient";
+
 equation
     if mode==1 then
         d_vx=der(vx);
-
         d_vy=der(vy);
-
         d_wz=der(wz);
-
         d_theta=der(theta);
      elseif mode==2 then
         d_vx=zeros(nu);
-
         d_vy=zeros(nu);
-
         d_wz=zeros(nu);
-
         d_theta=der(theta);
     else
         d_vx=zeros(nu);
-
         d_vy=zeros(nu);
-
         d_wz=zeros(nu);
-
         d_theta=zeros(nu-1);
     end if;
 
@@ -177,21 +170,41 @@ end for;
 /* Slip angles */
 alpha = ((matrix(vy)*ones(1,na)+Lcog.*(matrix(wz)*ones(1,na)))./(matrix(vx)*ones(1,na))-delta);
 
-/* Tire force */
-for i in 1:nu loop
-  for j in 1:na loop
-    if driven[i,j] then
-      Fxw[i,j]=Fxd;
-    else
-      Fxw[i,j]=0;
-    end if;
+
+  /* Tire force */
+  //Tyre-Longitudinal
+  for i in 1:nu loop
+    for j in 1:na loop
+      if driven[i, j] then
+        Fxw[i, j] = Fxd;
+      else
+        Fxw[i, j] = 0;
+      end if;
+    end for;
   end for;
-end for;
+  //Tyre-Lateral
+  for i in 1:nu loop
+    for j in 1:na loop
+//       //Change step 2:
+       if driven[i, j] then
+         Fyw[i, j] = -sign(alpha[i, j])*min(C[i, j]*abs(alpha[i, j]), mu*verticalForces.Fz[i, j])*sqrt(1-((Fyw[i, j]/(mu*verticalForces.Fz[i, j]))^2));
+       else
+         Fyw[i, j] = -sign(alpha[i, j])*min(C[i, j]*abs(alpha[i, j]), mu*verticalForces.Fz[i, j]);
+       end if;
+//       //Change step 1:
+//        if driven[i, j] then
+//          Fyw[i, j] = -C[i, j]*alpha[i, j];
+//        else
+//          Fyw[i, j] = -sign(alpha[i, j])*min(C[i, j]*abs(alpha[i, j]), mu*verticalForces.Fz[i, j]);
+//        end if;
+//       //No change:
+//          Fyw[i, j] = -C[i, j]*alpha[i, j];
+    end for;
+  end for;
+  //Transfromation between tyre and vehicle units coordinate systems
+  Fx = Fxw .* cos(delta) - Fyw .* sin(delta);
+  Fy = Fxw .* sin(delta) + Fyw .* cos(delta) - sin(inclination)*verticalForces.Fz;
 
-  Fyw = -C.*alpha;
-
-  Fx = Fxw.*cos(delta)-Fyw.*sin(delta);
-  Fy =Fxw .* sin(delta) + Fyw .* cos(delta) - sin(inclination)*verticalForces.Fz;
 
 /* Kinematic constraints in couplings */
 for i in 1:nu-1 loop
@@ -214,4 +227,4 @@ d_theta = wz[1:(nu-1)]-wz[2:nu];
 
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}})));
-end SingleTrack;
+end SingleTrack_SaturatedTyre;

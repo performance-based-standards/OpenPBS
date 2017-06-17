@@ -17,9 +17,9 @@ model TestRegistryParameters2
       tractorParam,
       semitrailerParam})
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
-  parameter Parameters.Variants.FromRegistry.SLX394 tractorParam
+  parameter Parameters.Vehicles.FromRegistry.SLX394 tractorParam
     annotation (Placement(transformation(extent={{-138,64},{-118,84}})));
-  parameter Parameters.Variants.FromRegistry.CNC134 semitrailerParam
+  parameter Parameters.Vehicles.FromRegistry.CNC134 semitrailerParam
     annotation (Placement(transformation(extent={{-138,42},{-118,62}})));
   Modelica.Blocks.Sources.Constant const1(k=0)
     annotation (Placement(transformation(extent={{-60,-20},{-40,0}})));
