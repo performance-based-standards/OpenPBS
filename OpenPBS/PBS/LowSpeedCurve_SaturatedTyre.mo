@@ -19,7 +19,7 @@ model LowSpeedCurve_SaturatedTyre
                                vehicle(paramSet=paramSet,
     nu=nu,
     na=na,
-    mu=0.3)
+    mu=max_friction)
     annotation (Placement(transformation(extent={{20,-52},{40,-32}})));
   replaceable parameter       Parameters.Vehicles.Adouble6x4
                                        paramSet constrainedby
@@ -129,7 +129,7 @@ model LowSpeedCurve_SaturatedTyre
   Modelica.Blocks.Sources.RealExpression realExpression1[nu,
     na](y=vehicle.vehicle.friction_usage)
     annotation (Placement(transformation(extent={{4,28},{30,48}})));
-  parameter Real max_friction=0.8
+  parameter Real max_friction=0.3
     "Maximum allowed friction (for friction demand calculation)";
   Modelica.Blocks.Interfaces.RealOutput FDST "Friction demand on steer tyres"
     annotation (Placement(transformation(extent={{100,34},{120,54}})));
