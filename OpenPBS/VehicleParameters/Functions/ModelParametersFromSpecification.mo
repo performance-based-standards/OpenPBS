@@ -1,4 +1,4 @@
-within OpenPBS.Parameters.Functions;
+within OpenPBS.VehicleParameters.Functions;
 function ModelParametersFromSpecification
   input Integer nu "Number of units";
   input Integer na "Number of axles (max over combination)";

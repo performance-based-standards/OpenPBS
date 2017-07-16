@@ -28,7 +28,7 @@ model DirectionInput_SaturatedTyre
   Components.MotionOffset motionOffset(y_offset=-paramSet.w[1, 1]/2,
       x_offset=vehicle.Lcog[1, 1])
     annotation (Placement(transformation(extent={{0,-20},{-20,0}})));
-  parameter Vehicles.Base.VehicleModel paramSet
+  parameter VehicleParameters.Base.VehicleModel paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
   Modelica.Blocks.Sources.RealExpression realExpression2(y=vehicle.pz[1])
     annotation (Placement(transformation(extent={{-40,-44},{-60,-24}})));

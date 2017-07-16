@@ -1,8 +1,8 @@
 within OpenPBS.VehicleModels;
 partial model Longitudinal
 
-  replaceable parameter Vehicles.Vehicles.Adouble6x4 paramSet constrainedby
-    Vehicles.Base.VehicleModel
+  replaceable parameter VehicleParameters.Vehicles.Adouble6x4 paramSet
+    constrainedby VehicleParameters.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 
    parameter Integer mode=2

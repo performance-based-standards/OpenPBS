@@ -1,6 +1,6 @@
 within OpenPBS.VehicleModels;
 model VerticalForces
-  parameter OpenPBS.Vehicles.Base.VehicleModel paramSet;
+  parameter OpenPBS.VehicleParameters.Base.VehicleModel paramSet;
   parameter Integer nu=paramSet.nu "Number of units";
   parameter Integer na=paramSet.na "Max number of axles per unit";
 

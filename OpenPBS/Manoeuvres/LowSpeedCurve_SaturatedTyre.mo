@@ -22,8 +22,8 @@ model LowSpeedCurve_SaturatedTyre
     na=na,
     mu=max_friction)
     annotation (Placement(transformation(extent={{20,-52},{40,-32}})));
-  replaceable parameter OpenPBS.Vehicles.Vehicles.Adouble6x4 paramSet
-    constrainedby OpenPBS.Vehicles.Base.VehicleModel
+  replaceable parameter OpenPBS.VehicleParameters.Vehicles.Adouble6x4 paramSet
+    constrainedby OpenPBS.VehicleParameters.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
   Modelica.Blocks.Sources.RealExpression realExpression3[nu,
     na](y=matrix(vehicle.vehicle.vy)*ones(1, na))

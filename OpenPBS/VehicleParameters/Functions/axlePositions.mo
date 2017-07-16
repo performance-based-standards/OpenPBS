@@ -1,4 +1,4 @@
-within OpenPBS.Parameters.Functions;
+within OpenPBS.VehicleParameters.Functions;
 function axlePositions "Calculate axle positions relative first axle"
   input Integer na;
 

@@ -5,8 +5,8 @@ model Longitudinal
 
   parameter Integer nu=paramSet.nu;
   parameter Integer na=paramSet.na;
-  replaceable parameter OpenPBS.Vehicles.Vehicles.Adouble6x4 paramSet
-    constrainedby OpenPBS.Vehicles.Base.VehicleModel
+  replaceable parameter OpenPBS.VehicleParameters.Vehicles.Adouble6x4 paramSet
+    constrainedby OpenPBS.VehicleParameters.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 
   Modelica.Blocks.Interfaces.RealOutput S "Startability"

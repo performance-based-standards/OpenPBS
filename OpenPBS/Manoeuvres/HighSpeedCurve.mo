@@ -2,8 +2,8 @@ within OpenPBS.Manoeuvres;
 model HighSpeedCurve
   import OpenPBS;
   extends Modelica.Blocks.Icons.Block;
-  replaceable parameter OpenPBS.Vehicles.Vehicles.Adouble6x4 paramSet
-    constrainedby OpenPBS.Vehicles.Base.VehicleModel
+  replaceable parameter OpenPBS.VehicleParameters.Vehicles.Adouble6x4 paramSet
+    constrainedby OpenPBS.VehicleParameters.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
   parameter Integer nu=4;
   parameter Integer na=3;

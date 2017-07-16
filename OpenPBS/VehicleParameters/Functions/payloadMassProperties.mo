@@ -1,4 +1,4 @@
-within OpenPBS.Parameters.Functions;
+within OpenPBS.VehicleParameters.Functions;
 function payloadMassProperties
   "Payload mass properties from load size and distribution"
   input Modelica.SIunits.Mass max_mass=30000 "Max allowed mass";

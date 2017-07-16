@@ -1,4 +1,4 @@
-within OpenPBS.Parameters.Functions;
+within OpenPBS.VehicleParameters.Functions;
 function totalMassProperties
   "Find total CG of a unit based on chassis and payload mass"
   input Modelica.SIunits.Mass m_chassis;

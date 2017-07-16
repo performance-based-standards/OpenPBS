@@ -1,9 +1,6 @@
-within OpenPBS.Parameters;
+within OpenPBS.VehicleParameters;
 package Functions
   extends Modelica.Icons.VariantsPackage;
-
-
-
 
 
 

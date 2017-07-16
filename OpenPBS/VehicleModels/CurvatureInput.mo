@@ -25,7 +25,7 @@ model CurvatureInput "Steady-state curve"
   Modelica.Blocks.Interfaces.RealOutput curvature_out[nu,na]
     "Curvature per axle"
     annotation (Placement(transformation(extent={{100,-70},{120,-50}})));
-  parameter Vehicles.Base.VehicleModel paramSet
+  parameter VehicleParameters.Base.VehicleModel paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
   Modelica.Blocks.Interfaces.RealOutput delta_out "Front steer angle"
     annotation (Placement(transformation(extent={{100,50},{120,70}})));

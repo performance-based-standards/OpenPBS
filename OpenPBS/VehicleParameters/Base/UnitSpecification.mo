@@ -1,4 +1,4 @@
-﻿within OpenPBS.Vehicles.Base;
+﻿within OpenPBS.VehicleParameters.Base;
 record UnitSpecification
   "Specification data, typically from bilregistret"
   extends Modelica.Icons.Record;

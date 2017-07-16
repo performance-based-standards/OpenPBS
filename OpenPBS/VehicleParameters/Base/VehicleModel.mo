@@ -1,4 +1,4 @@
-﻿within OpenPBS.Vehicles.Base;
+﻿within OpenPBS.VehicleParameters.Base;
 record VehicleModel "Base vehicle model parameter set"
   extends Modelica.Icons.Record;
   parameter Integer nu=2 "Number of units";
@@ -42,6 +42,7 @@ record VehicleModel "Base vehicle model parameter set"
     Documentation(info="<html>
 
 </html>"));
+
 
   // Beräknade indata
 // Axel/boggitryck i kopplad kombination - Beräknas i simulering, VerticalForces

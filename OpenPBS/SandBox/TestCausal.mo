@@ -7,7 +7,7 @@ model TestCausal
     annotation (Placement(transformation(extent={{-100,40},{-80,60}})));
   VehicleModels.SingleTrack singleTrack(mode=1)
     annotation (Placement(transformation(extent={{-10,40},{10,60}})));
-  inner parameter Vehicles.Vehicles.Adouble6x4 paramSet
+  inner parameter VehicleParameters.Vehicles.Adouble6x4 paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 equation
   connect(singleTrack.vx_in, const.y) annotation (Line(points={{-12,44},{
