@@ -1,6 +1,7 @@
 within OpenPBS.SandBox;
 model TestRegistryParameters
-  extends PBS.LowSpeedCurve(final paramSet=
+  extends Manouvres.LowSpeedCurve(
+                            final paramSet=
     OpenPBS.Parameters.Functions.ModelParametersFromSpecification(
       nu=2,
       na=3,

@@ -1,4 +1,4 @@
-within OpenPBS.Parameters.Base;
+﻿within OpenPBS.Parameters.Base;
 record UnitSpecification
   "Specification data, typically from bilregistret"
   extends Modelica.Icons.Record;
@@ -8,13 +8,13 @@ record UnitSpecification
   parameter Integer  n_axles "Antal axlar";
   parameter Integer   n_wheels "Antal hjul";
 
-  parameter Modelica.SIunits.Mass max_payload_mass "Till�ten vikt";
+  parameter Modelica.SIunits.Mass max_payload_mass "Tillåten vikt";
   parameter Modelica.SIunits.Length coupling_distance_EU
-    "Kopplingsavst�nd EU";
+    "Kopplingsavstånd EU";
   parameter Modelica.SIunits.Length coupling_distance_front
-    "Avst�nd mellan kopplingar";
+    "Avstånd mellan kopplingar";
 
-  parameter Modelica.SIunits.Length rear_overhang "Bakre �verh�ng";
+  parameter Modelica.SIunits.Length rear_overhang "Bakre överhäng";
 
   parameter Modelica.SIunits.Length wheelbase[n_axles]
     "Distance to the next rearward axle";
@@ -26,12 +26,12 @@ record UnitSpecification
   parameter Real tyre_dimension3[n_wheels]
     "Third number in tyre dimension, rim diameter, in inches";
 
-  //parameter Modelica.SIunits.Length tyre_dimension[n_wheels] "D�cksdimension";
-  parameter Modelica.SIunits.Length length "Fordonsl�ngd";
-  parameter Modelica.SIunits.Length height "Fordonsh�jd";
+  //parameter Modelica.SIunits.Length tyre_dimension[n_wheels] "Däcksdimension";
+  parameter Modelica.SIunits.Length length "Fordonslängd";
+  parameter Modelica.SIunits.Length height "Fordonshöjd";
   parameter Modelica.SIunits.Length width "Fordonsbredd";
   parameter Modelica.SIunits.Mass kerb_mass
-    "Tj�nstevikt inkl p�byggnad";
+    "Tjänstevikt inkl påbyggnad";
   parameter Real load_index "Lastindex";
   parameter Modelica.SIunits.Power max_engine_power "Max engine power";
 
@@ -55,7 +55,7 @@ record UnitSpecification
   parameter Modelica.SIunits.Position cg_z_location_unloaded
     "C.g. height of unloaded vehicle, relative to ground";
 
-  parameter Modelica.SIunits.Length front_overhang "Fr�mre �verh�ng";
+  parameter Modelica.SIunits.Length front_overhang "Främre överhäng";
 
   // Tire data
   parameter Real cornering_coefficient=5.5

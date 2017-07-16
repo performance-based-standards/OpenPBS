@@ -17,7 +17,7 @@ model CurvatureInput "Steady-state curve"
     annotation (Placement(transformation(extent={{26,-16},{6,4}})));
   Modelica.Blocks.Interfaces.RealInput vx_in annotation (Placement(
         transformation(rotation=0, extent={{-120,-70},{-100,-50}})));
-  PBS.Blocks.Curvature curvature(
+  Manouvres.Blocks.Curvature curvature(
     nu=paramSet.nu,
     na=paramSet.na,
     Lcog=vehicle.Lcog)
