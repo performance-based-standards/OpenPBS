@@ -1,6 +1,6 @@
-within OpenPBS.Components;
+﻿within OpenPBS.Components;
 block Curve90deg
-  "Output curvature as a function of path length for a 90� curve"
+  "Output curvature as a function of path length for a 90° curve"
   extends Modelica.Blocks.Interfaces.SISO;
   parameter Modelica.SIunits.Length radius=12.5 "Curve radius";
   parameter Modelica.SIunits.Position s_start=50
