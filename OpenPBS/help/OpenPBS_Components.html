@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenPBS.Components</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; border: 1px solid #808080; vertical-align: top; }
+th      { padding: 2px; border: 1px solid #808080; vertical-align: top; font-weight: bold; }
+table   { border: 1px solid #808080; border-collapse: collapse; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Components<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Components"></a><a href="OpenPBS.html#OpenPBS"
+>OpenPBS</a>.Components</h2>
+<p>
+</p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenPBS.Components.PathPositionS.png" alt="OpenPBS.Components.PathPosition" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Components.html#OpenPBS.Components.PathPosition"
+>PathPosition</a>
+</td>
+<td>Calculate path coordinates based on integrating global velocity</td>
+</tr>
+<tr>
+<td><img src="OpenPBS.Components.Curve90degS.png" alt="OpenPBS.Components.Curve90deg" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Components.html#OpenPBS.Components.Curve90deg"
+>Curve90deg</a>
+</td>
+<td>Output curvature as a function of path length for a 90° curve</td>
+</tr>
+<tr>
+<td><img src="OpenPBS.Components.MotionOffsetS.png" alt="OpenPBS.Components.MotionOffset" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Components.html#OpenPBS.Components.MotionOffset"
+>MotionOffset</a>
+</td>
+<td>Calculate velocities and positions of a point offset from vehicle c.g.</td>
+</tr>
+<tr>
+<td><img src="OpenPBS.Components.PathPo14ece1abcb481299CurveS.png" alt="OpenPBS.Components.PathPosition90degCurve" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Components.html#OpenPBS.Components.PathPosition90degCurve"
+>PathPosition90degCurve</a>
+</td>
+<td>Calculate the position of a point given by the offest parameters.</td>
+</tr>
+</table>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PathPosition<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenPBS.Components.PathPositionI.png" alt="OpenPBS.Components.PathPosition" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenPBS.Components.PathPosition"></a><a href="OpenPBS_Components.html#OpenPBS.Components"
+>OpenPBS.Components</a>.PathPosition</h2>
+<p>
+<span class="ModelicaDescription">Calculate path coordinates based on integrating global velocity</span>
+<br>
+<br><img src="OpenPBS.Components.PathPositionD.png" alt="OpenPBS.Components.PathPosition">
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>s0</td><td>0</td><td>Initial position along path [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>n0</td><td>0</td><td>Initial position normal to path [m]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>vx</td><td>Vehicle longitudinal velocity (vehicle local)</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>vy</td><td>Vehicle lateral velocity (vehicle local)</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>pz</td><td>Vehicle heading angle (global)</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>s_out</td><td>Position along path</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>n_out</td><td>Position normal to path</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>d_n_out</td><td>Derivative of position normal to path</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>pp_out</td><td>Path direction</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>c</td><td>Path curvature</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">block</span> PathPosition
+  <span class="ModelicaComment">&quot;Calculate path coordinates based on integrating global velocity&quot;</span>
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> s0=0 <span class="ModelicaComment">&quot;Initial position along path&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> n0=0
+    <span class="ModelicaComment">&quot;Initial position normal to path&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> vx
+    <span class="ModelicaComment">&quot;Vehicle longitudinal velocity (vehicle local)&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> vy
+    <span class="ModelicaComment">&quot;Vehicle lateral velocity (vehicle local)&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> pz <span class="ModelicaComment">&quot;Vehicle heading angle (global)&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> s_out=s <span class="ModelicaComment">&quot;Position along path&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> n_out=n <span class="ModelicaComment">&quot;Position normal to path&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> d_n_out=<span class="ModelicaFunction">der</span>(n)
+    <span class="ModelicaComment">&quot;Derivative of position normal to path&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> pp_out=pp <span class="ModelicaComment">&quot;Path direction&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Angle"
+>Modelica.SIunits.Angle</a> pp <span class="ModelicaComment">&quot;Path heading angle&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> s(start=s0) <span class="ModelicaComment">&quot;Position along path&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> n(start=n0) <span class="ModelicaComment">&quot;Position normal to path&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> c <span class="ModelicaComment">&quot;Path curvature&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> rx(start=s0)
+    <span class="ModelicaComment">&quot;Closest point on path x coordinate&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> ry(start=n0)
+    <span class="ModelicaComment">&quot;Closest point on path y coordinate&quot;</span>;
+
+<span class="ModelicaKeyword">equation </span>
+  <span class="ModelicaFunction">der</span>(s)*(1-n*c) = vx*<span class="ModelicaFunction">cos</span>(pz-pp)-vy*<span class="ModelicaFunction">sin</span>(pz-pp);
+  <span class="ModelicaFunction">der</span>(n) = vx*<span class="ModelicaFunction">sin</span>(pz-pp)+vy*<span class="ModelicaFunction">cos</span>(pz-pp);
+
+  <span class="ModelicaFunction">der</span>(pp) =<span class="ModelicaFunction"> der</span>(s)*c;
+
+  <span class="ModelicaFunction">der</span>(rx) =<span class="ModelicaFunction"> der</span>(s)*<span class="ModelicaFunction">cos</span>(pp)-0*<span class="ModelicaFunction">sin</span>(pp);
+  <span class="ModelicaFunction">der</span>(ry) =<span class="ModelicaFunction"> der</span>(s)*<span class="ModelicaFunction">sin</span>(pp)+0*<span class="ModelicaFunction">cos</span>(pp);
+
+<span class="ModelicaKeyword">end </span>PathPosition;
+</div>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Curve90deg<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenPBS.Components.Curve90degI.png" alt="OpenPBS.Components.Curve90deg" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenPBS.Components.Curve90deg"></a><a href="OpenPBS_Components.html#OpenPBS.Components"
+>OpenPBS.Components</a>.Curve90deg</h2>
+<p>
+<span class="ModelicaDescription">Output curvature as a function of path length for a 90° curve</span>
+<br>
+<br><img src="OpenPBS.Components.Curve90degD.png" alt="OpenPBS.Components.Curve90deg">
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.SISO"
+>Modelica.Blocks.Interfaces.SISO</a> (Single Input Single Output continuous control block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>radius</td><td>12.5</td><td>Curve radius [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>s_start</td><td>50</td><td>Position along path when curve starts [m]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>u</td><td>Connector of Real input signal</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>y</td><td>Connector of Real output signal</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">block</span> Curve90deg
+  <span class="ModelicaComment">&quot;Output curvature as a function of path length for a 90° curve&quot;</span>
+  <span class="ModelicaKeyword">extends </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.SISO"
+>Modelica.Blocks.Interfaces.SISO</a>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> radius=12.5 <span class="ModelicaComment">&quot;Curve radius&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> s_start=50
+    <span class="ModelicaComment">&quot;Position along path when curve starts&quot;</span>;
+  Real curvature;
+<span class="ModelicaKeyword">equation </span>
+  <span class="ModelicaKeyword">when </span><span class="ModelicaFunction">initial</span>()<span class="ModelicaKeyword"> then</span>
+    curvature = 0;
+  <span class="ModelicaKeyword">elsewhen </span>u&gt;s_start<span class="ModelicaKeyword"> then</span>
+    curvature = 1/radius;
+  <span class="ModelicaKeyword">elsewhen </span>u&gt;s_start+radius*Modelica.Constants.pi<span class="ModelicaKeyword"> then</span>
+    curvature = 0;
+  <span class="ModelicaKeyword">end when</span>;
+  y =<span class="ModelicaFunction"> smooth</span>(2,curvature);
+<span class="ModelicaKeyword">end </span>Curve90deg;
+</div>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE MotionOffset<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenPBS.Components.MotionOffsetI.png" alt="OpenPBS.Components.MotionOffset" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenPBS.Components.MotionOffset"></a><a href="OpenPBS_Components.html#OpenPBS.Components"
+>OpenPBS.Components</a>.MotionOffset</h2>
+<p>
+<span class="ModelicaDescription">Calculate velocities and positions of a point offset from vehicle c.g.</span>
+<br>
+<br><img src="OpenPBS.Components.MotionOffsetD.png" alt="OpenPBS.Components.MotionOffset">
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Icons.html#Modelica.Blocks.Icons.Block"
+>Modelica.Blocks.Icons.Block</a> (Basic graphical layout of input/output block).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>x_offset</td><td>0</td><td>Longitudinal offset [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>y_offset</td><td>0</td><td>Lateral offset [m]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>vx</td><td>Vehicle longitudinal velocity (vehicle local)</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>vy</td><td>Vehicle lateral velocity (vehicle local)</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>wz</td><td>Vehicle yaw rate</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>vx_offset</td><td>Longitudinal velocity at offset point</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>vy_offset</td><td>Lateral velocity at offset point</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">block</span> MotionOffset
+  <span class="ModelicaComment">&quot;Calculate velocities and positions of a point offset from vehicle c.g.&quot;</span>
+  <span class="ModelicaKeyword">extends </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Icons.html#Modelica.Blocks.Icons.Block"
+>Modelica.Blocks.Icons.Block</a>;
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> x_offset=0 <span class="ModelicaComment">&quot;Longitudinal offset&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> y_offset=0 <span class="ModelicaComment">&quot;Lateral offset&quot;</span>;
+
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> vx
+    <span class="ModelicaComment">&quot;Vehicle longitudinal velocity (vehicle local)&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> vy
+    <span class="ModelicaComment">&quot;Vehicle lateral velocity (vehicle local)&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> wz <span class="ModelicaComment">&quot;Vehicle yaw rate&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> vx_offset
+    <span class="ModelicaComment">&quot;Longitudinal velocity at offset point&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> vy_offset
+    <span class="ModelicaComment">&quot;Lateral velocity at offset point&quot;</span>;
+
+<span class="ModelicaKeyword">equation </span>
+  vx_offset = vx-wz*y_offset;
+  vy_offset = vy+wz*x_offset;
+
+<span class="ModelicaKeyword">end </span>MotionOffset;
+</div>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE PathPosition90degCurve<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenPBS.Components.PathPo14ece1abcb481299CurveI.png" alt="OpenPBS.Components.PathPosition90degCurve" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenPBS.Components.PathPosition90degCurve"></a><a href="OpenPBS_Components.html#OpenPBS.Components"
+>OpenPBS.Components</a>.PathPosition90degCurve</h2>
+<p>
+<span class="ModelicaDescription">Calculate the position of a point given by the offest parameters.</span>
+<br>
+<br><img src="OpenPBS.Components.PathPo14ece1abcb481299CurveD.png" alt="OpenPBS.Components.PathPosition90degCurve">
+</p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td>Integer</td><td>nu</td><td>2</td><td>Number of units</td></tr>
+<tr><td>Integer</td><td>na</td><td>3</td><td>Max number of axles per unit</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>x_offset</td><td>0</td><td>Longitudinal offset [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>y_offset</td><td>0</td><td>Lateral offset [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>s0</td><td>0</td><td>Initial position along path [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>n0</td><td>0</td><td>Initial position normal to path [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>radius</td><td>12.5</td><td>Curve radius [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>s_start</td><td>50</td><td>Position along path when curve starts [m]</td></tr>
+</table>
+<h3>Connectors</h3>
+<table summary="Connectors" class="ModelicaTableConnectors">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>vx</td><td>Vehicle longitudinal velocity (local)</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>vy</td><td>Vehicle lateral velocity(local)</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>wz</td><td>Yaw rate</td></tr>
+<tr><td>input <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>RealInput</a></td><td>pz</td><td>Vehicle heading angle</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>s_out</td><td>Position along path</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>n_out</td><td>Position normal to path</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>d_n_out</td><td>Derivative of normal position</td></tr>
+<tr><td>output <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>RealOutput</a></td><td>pp_out</td><td>Path direction</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">model</span> PathPosition90degCurve
+  <span class="ModelicaComment">&quot;Calculate the position of a point given by the offest parameters.&quot;</span>
+
+  <a href="OpenPBS_Components.html#OpenPBS.Components.PathPosition"
+>Components.PathPosition</a> pathPosition(s0=s0, n0=n0);
+  <a href="OpenPBS_Components.html#OpenPBS.Components.MotionOffset"
+>Components.MotionOffset</a> motionOffset(x_offset=x_offset, y_offset=y_offset);
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> vx <span class="ModelicaComment">&quot;Vehicle longitudinal velocity (local)&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> vy <span class="ModelicaComment">&quot;Vehicle lateral velocity(local)&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> wz <span class="ModelicaComment">&quot;Yaw rate&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealInput"
+>Modelica.Blocks.Interfaces.RealInput</a> pz <span class="ModelicaComment">&quot;Vehicle heading angle&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> s_out <span class="ModelicaComment">&quot;Position along path&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> n_out <span class="ModelicaComment">&quot;Position normal to path&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> d_n_out <span class="ModelicaComment">&quot;Derivative of normal position&quot;</span>;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Blocks_Interfaces.html#Modelica.Blocks.Interfaces.RealOutput"
+>Modelica.Blocks.Interfaces.RealOutput</a> pp_out <span class="ModelicaComment">&quot;Path direction&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Integer nu=2 <span class="ModelicaComment">&quot;Number of units&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Integer na=3 <span class="ModelicaComment">&quot;Max number of axles per unit&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> x_offset=0 <span class="ModelicaComment">&quot;Longitudinal offset&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> y_offset=0 <span class="ModelicaComment">&quot;Lateral offset&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> s0=0 <span class="ModelicaComment">&quot;Initial position along path&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> n0=0 <span class="ModelicaComment">&quot;Initial position normal to path&quot;</span>;
+  <a href="OpenPBS_Components.html#OpenPBS.Components.Curve90deg"
+>Components.Curve90deg</a> curve90deg(radius=radius, s_start=s_start);
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> radius=12.5 <span class="ModelicaComment">&quot;Curve radius&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> s_start=50
+    <span class="ModelicaComment">&quot;Position along path when curve starts&quot;</span>;
+<span class="ModelicaKeyword">equation </span>
+  <span class="ModelicaFunction">connect</span>(motionOffset.vx_offset, pathPosition.vx);
+  <span class="ModelicaFunction">connect</span>(motionOffset.vy_offset, pathPosition.vy);
+  <span class="ModelicaFunction">connect</span>(vx, motionOffset.vx);
+  <span class="ModelicaFunction">connect</span>(vy, motionOffset.vy);
+  <span class="ModelicaFunction">connect</span>(wz, motionOffset.wz);
+  <span class="ModelicaFunction">connect</span>(pz, pathPosition.pz);
+  <span class="ModelicaFunction">connect</span>(pp_out, pp_out);
+  <span class="ModelicaFunction">connect</span>(pathPosition.s_out, s_out);
+  <span class="ModelicaFunction">connect</span>(pathPosition.n_out, n_out);
+  <span class="ModelicaFunction">connect</span>(pathPosition.d_n_out, d_n_out);
+  <span class="ModelicaFunction">connect</span>(pathPosition.pp_out, pp_out);
+  <span class="ModelicaFunction">connect</span>(curve90deg.y, pathPosition.c);
+  <span class="ModelicaFunction">connect</span>(pathPosition.s_out, curve90deg.u);
+<span class="ModelicaKeyword">end </span>PathPosition90degCurve;
+</div>
+<hr>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Sun Jul 16 11:17:01 2017.
+</address>
+</body>
+</html>

@@ -16,7 +16,7 @@ model TestPathPosition4
 
   VehicleModels.DirectionInput vehicle
     annotation (Placement(transformation(extent={{40,-30},{60,-10}})));
-  inner Parameters.Vehicles.Adouble6x4 paramSet
+  inner Vehicles.Vehicles.Adouble6x4 paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 equation
   connect(realExpression.y, pathPosition.vy)

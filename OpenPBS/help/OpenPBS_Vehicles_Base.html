@@ -1,0 +1,379 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenPBS.Vehicles.Base</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; border: 1px solid #808080; vertical-align: top; }
+th      { padding: 2px; border: 1px solid #808080; vertical-align: top; font-weight: bold; }
+table   { border: 1px solid #808080; border-collapse: collapse; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Base<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.Base"></a><a href="OpenPBS_Vehicles.html#OpenPBS.Vehicles"
+>OpenPBS.Vehicles</a>.Base</h2>
+<p>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Icons_InterfacesPackage.html#Modelica.Icons.InterfacesPackage"
+>Modelica.Icons.InterfacesPackage</a> (Icon for packages containing interfaces).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenPBS.Vehicles.Base.VehicleModelS.png" alt="OpenPBS.Vehicles.Base.VehicleModel" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.VehicleModel"
+>VehicleModel</a>
+</td>
+<td>Base vehicle model parameter set</td>
+</tr>
+<tr>
+<td><img src="OpenPBS.Vehicles.Base.VehicleModelS.png" alt="OpenPBS.Vehicles.Base.UnitSpecification" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.UnitSpecification"
+>UnitSpecification</a>
+</td>
+<td>Specification data, typically from bilregistret</td>
+</tr>
+</table>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE VehicleModel<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenPBS.Vehicles.Base.VehicleModelI.png" alt="OpenPBS.Vehicles.Base.VehicleModel" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenPBS.Vehicles.Base.VehicleModel"></a><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base"
+>OpenPBS.Vehicles.Base</a>.VehicleModel</h2>
+<p>
+<span class="ModelicaDescription">Base vehicle model parameter set</span>
+</p>
+<h3>Information</h3>
+
+
+
+<p><span class="ModelicaBaseClass">Extends from <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Icons.html#Modelica.Icons.Record"
+>Modelica.Icons.Record</a> (Icon for records).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td>Integer</td><td>nu</td><td>2</td><td>Number of units</td></tr>
+<tr><td>Integer</td><td>na</td><td>3</td><td>Max number of axles per unit</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>L[nu, na]</td><td>[1, 1, 1; 1, 1, 1]</td><td>All axle longitudinal positions rearward from first axle of each unit [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>w[nu, na]</td><td>[1, 1, 1; 1, 1, 1]</td><td>Track width per axle [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>X[nu]</td><td>{-1,-1}</td><td>C.g. longitudinal position relative first axle [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgh[nu]</td><td>{1,1}</td><td>C.g. height over ground [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>A[nu]</td><td>{1,1}</td><td>Front coupling position relative first axle [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>B[nu]</td><td>{-2,-2}</td><td>Rear coupling position relative first axle [m]</td></tr>
+<tr><td>Boolean</td><td>driven[nu, na]</td><td>[false, true, false; false, ...</td><td>True for each driven axle</td></tr>
+<tr><td>Real</td><td>Cc[nu, na]</td><td>5.5*[1, 1, 1; 1, 1, 1]</td><td>Cornering coefficient per axle</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>m[nu]</td><td>{10000,10000}</td><td>Masses [kg]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>I[nu]</td><td>{10000,10000}</td><td>Inertias [kg.m2]</td></tr>
+<tr><td>Integer</td><td>axlegroups[nu, na]</td><td>[1, 2, 2; 1, 1, 1]</td><td>&nbsp;</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>FOH[nu]</td><td>{1,1}</td><td>Front hang define from the front axle of each unit. [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>ROH[nu]</td><td>{-5,-5}</td><td>Rear hang define from the front axle of each unit. [m]</td></tr>
+<tr><td>Real</td><td>drag_coefficient</td><td>0.5</td><td>&nbsp;</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Area"
+>Area</a></td><td>frontal_area</td><td>4</td><td>[m2]</td></tr>
+<tr><td>Real</td><td>rolling_resistance_coefficient</td><td>0.0004</td><td>Rolling resistance force as a function of vertical force</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Power"
+>Power</a></td><td>max_engine_power</td><td>550000</td><td>[W]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Force"
+>Force</a></td><td>max_thrust_force_vx0</td><td>175000</td><td>[N]</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">record</span> VehicleModel <span class="ModelicaComment">&quot;Base vehicle model parameter set&quot;</span>
+  <span class="ModelicaKeyword">extends </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Icons.html#Modelica.Icons.Record"
+>Modelica.Icons.Record</a>;
+  <span class="ModelicaKeyword">parameter </span>Integer nu=2 <span class="ModelicaComment">&quot;Number of units&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Integer na=3 <span class="ModelicaComment">&quot;Max number of axles per unit&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a>[nu,na] L=[1,1,1;1,1,1]
+    <span class="ModelicaComment">&quot;All axle longitudinal positions rearward from first axle of each unit&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a>[nu,na] w=[1,1,1;1,1,1]
+    <span class="ModelicaComment">&quot;Track width per axle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a>[nu] X={-1,-1}
+    <span class="ModelicaComment">&quot;C.g. longitudinal position relative first axle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a>[nu] cgh={1,1}
+    <span class="ModelicaComment">&quot;C.g. height over ground&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a>[nu] A={1,1}
+    <span class="ModelicaComment">&quot;Front coupling position relative first axle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a>[nu] B={-2,-2}
+    <span class="ModelicaComment">&quot;Rear coupling position relative first axle&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span>Boolean[nu,na] driven=[false,true,false;false,false,false]
+    <span class="ModelicaComment">&quot;True for each driven axle&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span>Real[nu,na] Cc=5.5*[1,1,1;1,1,1]
+    <span class="ModelicaComment">&quot;Cornering coefficient per axle&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a>[nu] m={10000,10000} <span class="ModelicaComment">&quot;Masses&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a>[nu] I={10000,10000} <span class="ModelicaComment">&quot;Inertias&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span>Integer[nu,na] axlegroups=[1,2,2;1,1,1];
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a>[nu] FOH={1,1}
+                                            <span class="ModelicaComment">&quot;Front hang define from the front axle of each unit.&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a>[nu] ROH={-5,-5}
+                                            <span class="ModelicaComment">&quot;Rear hang define from the front axle of each unit.&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Real drag_coefficient=0.5;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Area"
+>Modelica.SIunits.Area</a> frontal_area=4;
+  <span class="ModelicaKeyword">parameter </span>Real rolling_resistance_coefficient=0.0004 <span class="ModelicaComment">&quot;Rolling resistance force as a function of vertical force&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Power"
+>Modelica.SIunits.Power</a> max_engine_power=550000;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Force"
+>Modelica.SIunits.Force</a> max_thrust_force_vx0=175000;
+
+  <span class="ModelicaComment">// Beräknade indata</span>
+<span class="ModelicaComment">// Axel/boggitryck i kopplad kombination - Beräknas i simulering, VerticalForces</span>
+<span class="ModelicaComment">// Kopplingstryck - Beräknas i simulering, VerticalForces</span>
+<span class="ModelicaComment">// Tyngdpunktshöjd - cgh</span>
+<span class="ModelicaComment">// Resulterande tyngdpunktshöjd - ?</span>
+<span class="ModelicaComment">// Spårvidd - w</span>
+<span class="ModelicaComment">// Resulterande spårvidd - ?</span>
+<span class="ModelicaComment">// Kopplingsavstånd EU till främre koppling</span>
+<span class="ModelicaComment">// Kopplingsavstånd EU till bakre koppling</span>
+<span class="ModelicaComment">// Tröghetsmoment - I (yaw)</span>
+<span class="ModelicaComment">// Tyngdpunktsposition rel. axel 1 - X</span>
+<span class="ModelicaComment">// Främre kopplingsposition rel. axel 1 - A</span>
+<span class="ModelicaComment">// Bakre kopplingsposition rel.axel 1 - B</span>
+<span class="ModelicaComment">// Axelposition rel. axel 1 - L</span>
+<span class="ModelicaComment">// Modifieringsfaktor</span>
+
+<span class="ModelicaKeyword">end </span>VehicleModel;
+</div>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE UnitSpecification<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><img src="OpenPBS.Vehicles.Base.VehicleModelI.png" alt="OpenPBS.Vehicles.Base.UnitSpecification" align="right" style="border: 1px solid" width="80" height="80">
+<a name="OpenPBS.Vehicles.Base.UnitSpecification"></a><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base"
+>OpenPBS.Vehicles.Base</a>.UnitSpecification</h2>
+<p>
+<span class="ModelicaDescription">Specification data, typically from bilregistret</span>
+</p>
+<h3>Information</h3>
+
+<p><img src="file:///D:/Users/bengtja.NET/Documents/GitHub/OpenPBS/OpenPBS/Resources/illustrations/vehiclespec.png"/></p>
+
+<p><span class="ModelicaBaseClass">Extends from <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Icons.html#Modelica.Icons.Record"
+>Modelica.Icons.Record</a> (Icon for records).</span></p>
+<h3>Parameters</h3>
+<table summary="Parameters" class="ModelicaTableParameters">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td>Integer</td><td>n_axles</td><td>&nbsp;</td><td>Antal axlar</td></tr>
+<tr><td>Integer</td><td>n_wheels</td><td>&nbsp;</td><td>Antal hjul</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>max_payload_mass</td><td>&nbsp;</td><td>Tillåten vikt [kg]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>coupling_distance_EU</td><td>&nbsp;</td><td>Kopplingsavstånd EU [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>coupling_distance_front</td><td>&nbsp;</td><td>Avstånd mellan kopplingar [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>rear_overhang</td><td>&nbsp;</td><td>Bakre överhäng [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>wheelbase[n_axles]</td><td>&nbsp;</td><td>Distance to the next rearward axle [m]</td></tr>
+<tr><td>Real</td><td>tyre_dimension1[n_wheels]</td><td>&nbsp;</td><td>First number in tyre dimesion, tyre width in mm</td></tr>
+<tr><td>Real</td><td>tyre_dimension2[n_wheels]</td><td>&nbsp;</td><td>Second number in tyre dimension, aspect ratio, tyre height relative to width, in percent</td></tr>
+<tr><td>Real</td><td>tyre_dimension3[n_wheels]</td><td>&nbsp;</td><td>Third number in tyre dimension, rim diameter, in inches</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>length</td><td>&nbsp;</td><td>Fordonslängd [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>height</td><td>&nbsp;</td><td>Fordonshöjd [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>width</td><td>&nbsp;</td><td>Fordonsbredd [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>kerb_mass</td><td>&nbsp;</td><td>Tjänstevikt inkl påbyggnad [kg]</td></tr>
+<tr><td>Real</td><td>load_index</td><td>&nbsp;</td><td>Lastindex</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Power"
+>Power</a></td><td>max_engine_power</td><td>&nbsp;</td><td>Max engine power [W]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>chassis_height</td><td>&nbsp;</td><td>Height where load space starts/lower edge of load space [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>max_load_height</td><td>&nbsp;</td><td>Max height of load space above ground [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>load_space_length</td><td>&nbsp;</td><td>Length of load space [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>load_space_position</td><td>&nbsp;</td><td>Front end of load space [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>yaw_inertia_unloaded</td><td>&nbsp;</td><td>Yaw inertia of unloaded vehicle [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>pitch_inertia_unloaded</td><td>&nbsp;</td><td>Pitch inertia of unloaded vehicle [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>roll_inertia_unloaded</td><td>&nbsp;</td><td>Roll inertia of unloaded vehicle [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cg_x_location_unloaded</td><td>&nbsp;</td><td>Longitudinal c.g. location of unloaded vehicle, relative first axle [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cg_z_location_unloaded</td><td>&nbsp;</td><td>C.g. height of unloaded vehicle, relative to ground [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>front_overhang</td><td>&nbsp;</td><td>Främre överhäng [m]</td></tr>
+<tr><td>Real</td><td>cornering_coefficient</td><td>5.5</td><td>Cornering coefficient: C_alpha/Fz</td></tr>
+<tr><td>Integer</td><td>n_wheels_per_axle[n_axles]</td><td>&nbsp;</td><td>Number of wheels per axle</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>axle_width[n_axles]</td><td>&nbsp;</td><td>Axle width per axle (outer wheel ends) [m]</td></tr>
+<tr><td>Integer</td><td>axle_groups[n_axles]</td><td>&nbsp;</td><td>Axle group assignment for each axle</td></tr>
+<tr><td>Real</td><td>load_distribution[n_axles]</td><td>&nbsp;</td><td>Load distribution in each axle group</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Force"
+>Force</a></td><td>nominal_axle_load[n_axles]</td><td>&nbsp;</td><td>Nominal axle load [N]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Force"
+>Force</a></td><td>max_thrust_vx0</td><td>&nbsp;</td><td>Max thrust force at zero vehicle speed [N]</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">record</span> UnitSpecification
+  <span class="ModelicaComment">&quot;Specification data, typically from bilregistret&quot;</span>
+  <span class="ModelicaKeyword">extends </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Icons.html#Modelica.Icons.Record"
+>Modelica.Icons.Record</a>;
+
+  <span class="ModelicaComment">/*--- DATA FROM BILREGISTRET ---*/</span>
+  <span class="ModelicaComment">// parameter ??? &quot;Reg nummer&quot;;</span>
+  <span class="ModelicaKeyword">parameter </span>Integer  n_axles <span class="ModelicaComment">&quot;Antal axlar&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Integer   n_wheels <span class="ModelicaComment">&quot;Antal hjul&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> max_payload_mass <span class="ModelicaComment">&quot;Tillåten vikt&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> coupling_distance_EU
+    <span class="ModelicaComment">&quot;Kopplingsavstånd EU&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> coupling_distance_front
+    <span class="ModelicaComment">&quot;Avstånd mellan kopplingar&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> rear_overhang <span class="ModelicaComment">&quot;Bakre överhäng&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> wheelbase[n_axles]
+    <span class="ModelicaComment">&quot;Distance to the next rearward axle&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span>Real tyre_dimension1[n_wheels]
+    <span class="ModelicaComment">&quot;First number in tyre dimesion, tyre width in mm&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Real tyre_dimension2[n_wheels]
+    <span class="ModelicaComment">&quot;Second number in tyre dimension, aspect ratio, tyre height relative to width, in percent&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Real tyre_dimension3[n_wheels]
+    <span class="ModelicaComment">&quot;Third number in tyre dimension, rim diameter, in inches&quot;</span>;
+
+  <span class="ModelicaComment">//parameter Modelica.SIunits.Length tyre_dimension[n_wheels] &quot;Däcksdimension&quot;;</span>
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> length <span class="ModelicaComment">&quot;Fordonslängd&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> height <span class="ModelicaComment">&quot;Fordonshöjd&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> width <span class="ModelicaComment">&quot;Fordonsbredd&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> kerb_mass
+    <span class="ModelicaComment">&quot;Tjänstevikt inkl påbyggnad&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Real load_index <span class="ModelicaComment">&quot;Lastindex&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Power"
+>Modelica.SIunits.Power</a> max_engine_power <span class="ModelicaComment">&quot;Max engine power&quot;</span>;
+
+  <span class="ModelicaComment">/* --- DATA FROM OTHER SOURCES --- */</span>
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> chassis_height
+    <span class="ModelicaComment">&quot;Height where load space starts/lower edge of load space&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> max_load_height
+    <span class="ModelicaComment">&quot;Max height of load space above ground&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> load_space_length
+    <span class="ModelicaComment">&quot;Length of load space&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> load_space_position
+    <span class="ModelicaComment">&quot;Front end of load space&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> yaw_inertia_unloaded
+    <span class="ModelicaComment">&quot;Yaw inertia of unloaded vehicle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> pitch_inertia_unloaded
+    <span class="ModelicaComment">&quot;Pitch inertia of unloaded vehicle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> roll_inertia_unloaded
+    <span class="ModelicaComment">&quot;Roll inertia of unloaded vehicle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cg_x_location_unloaded
+    <span class="ModelicaComment">&quot;Longitudinal c.g. location of unloaded vehicle, relative first axle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cg_z_location_unloaded
+    <span class="ModelicaComment">&quot;C.g. height of unloaded vehicle, relative to ground&quot;</span>;
+
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> front_overhang <span class="ModelicaComment">&quot;Främre överhäng&quot;</span>;
+
+  <span class="ModelicaComment">// Tire data</span>
+  <span class="ModelicaKeyword">parameter </span>Real cornering_coefficient=5.5
+    <span class="ModelicaComment">&quot;Cornering coefficient: C_alpha/Fz&quot;</span>;
+
+  <span class="ModelicaComment">// Axle data</span>
+  <span class="ModelicaKeyword">parameter </span>Integer n_wheels_per_axle[n_axles]
+    <span class="ModelicaComment">&quot;Number of wheels per axle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> axle_width[n_axles]
+    <span class="ModelicaComment">&quot;Axle width per axle (outer wheel ends)&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Integer axle_groups[n_axles]
+    <span class="ModelicaComment">&quot;Axle group assignment for each axle&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span>Real load_distribution[n_axles]
+    <span class="ModelicaComment">&quot;Load distribution in each axle group&quot;</span>;
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Force"
+>Modelica.SIunits.Force</a> nominal_axle_load[n_axles]
+    <span class="ModelicaComment">&quot;Nominal axle load&quot;</span>;
+
+  <span class="ModelicaComment">// Powertrain data</span>
+  <span class="ModelicaKeyword">parameter </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Force"
+>Modelica.SIunits.Force</a> max_thrust_vx0
+    <span class="ModelicaComment">&quot;Max thrust force at zero vehicle speed&quot;</span>;
+
+<span class="ModelicaKeyword">end </span>UnitSpecification;
+</div>
+<hr>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Sun Jul 16 11:16:56 2017.
+</address>
+</body>
+</html>

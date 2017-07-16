@@ -19,9 +19,8 @@ model TestLowSpeedCurveFhRh "Test low speed curve with front and rear overhang"
     nu=nu,
     na=na)
     annotation (Placement(transformation(extent={{20,-68},{40,-48}})));
-  replaceable parameter       Parameters.Vehicles.Adouble6x4
-                                       paramSet constrainedby
-    Parameters.Base.VehicleModel
+  replaceable parameter Vehicles.Vehicles.Adouble6x4 paramSet constrainedby
+    Vehicles.Base.VehicleModel
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
   Modelica.Blocks.Sources.RealExpression realExpression3[nu,
     na](y=matrix(vehicle.vehicle.vy)*ones(1, na))
@@ -49,7 +48,7 @@ model TestLowSpeedCurveFhRh "Test low speed curve with front and rear overhang"
         vehicle.vehicle.Lcog, y_offset=-paramSet.w/2)
     "Position and velocity of right wheels on all axles"
     annotation (Placement(transformation(extent={{-60,-36},{-40,-16}})));
-  Manouvres.Blocks.RollingMax rollingMax(n1=nu, n2=na)
+  Manoeuvres.Blocks.RollingMax rollingMax(n1=nu, n2=na)
     "Maximum of all left wheel offsets"
     annotation (Placement(transformation(extent={{62,16},{82,36}})));
   parameter Modelica.SIunits.Length curve_radius=12.5;
@@ -61,7 +60,7 @@ model TestLowSpeedCurveFhRh "Test low speed curve with front and rear overhang"
   Modelica.Blocks.Logical.GreaterThreshold greaterThan(threshold=
         curve_start + curve_radius*Modelica.Constants.pi/2)
     annotation (Placement(transformation(extent={{40,-40},{60,-20}})));
-  Manouvres.Blocks.RollingMax rollingMax1(n1=nu, n2=na)
+  Manoeuvres.Blocks.RollingMax rollingMax1(n1=nu, n2=na)
     annotation (Placement(transformation(extent={{36,-10},{46,0}})));
   Modelica.Blocks.Math.Gain gain[nu,na](k=-1) annotation (
      Placement(transformation(
@@ -91,12 +90,12 @@ model TestLowSpeedCurveFhRh "Test low speed curve with front and rear overhang"
         *ones(1, 2)) annotation (Placement(transformation(extent={{-48,80},{-28,100}})));
   Modelica.Blocks.Sources.RealExpression realExpression8[nu,2](y=matrix(vehicle.vehicle.pz)
         *ones(1, 2)) annotation (Placement(transformation(extent={{-74,80},{-54,100}})));
-  Manouvres.Blocks.RollingMax rollingMax2(n1=nu, n2=1)
+  Manoeuvres.Blocks.RollingMax rollingMax2(n1=nu, n2=1)
     "Maximum of all left wheel offsets"
     annotation (Placement(transformation(extent={{70,96},{90,116}})));
   Modelica.Blocks.Interfaces.RealOutput FS "Low speed swept path"
     annotation (Placement(transformation(extent={{96,84},{116,104}})));
-  Manouvres.Blocks.RollingMax rollingMax3(n1=nu, n2=1)
+  Manoeuvres.Blocks.RollingMax rollingMax3(n1=nu, n2=1)
     "Maximum of all left wheel offsets"
     annotation (Placement(transformation(extent={{70,66},{90,86}})));
   Modelica.Blocks.Interfaces.RealOutput RS "Low speed swept path"
@@ -122,10 +121,10 @@ model TestLowSpeedCurveFhRh "Test low speed curve with front and rear overhang"
   Modelica.Blocks.Sources.RealExpression realExpression12[
                                                          nu,2](y=matrix(vehicle.vehicle.pz)
         *ones(1, 2)) annotation (Placement(transformation(extent={{-92,-108},{-72,-88}})));
-  Manouvres.Blocks.RollingMax rollingMax4(n1=nu, n2=1)
+  Manoeuvres.Blocks.RollingMax rollingMax4(n1=nu, n2=1)
     "Maximum of all left wheel offsets"
     annotation (Placement(transformation(extent={{52,-92},{72,-72}})));
-  Manouvres.Blocks.RollingMax rollingMax5(n1=nu, n2=1)
+  Manoeuvres.Blocks.RollingMax rollingMax5(n1=nu, n2=1)
     "Maximum of all left wheel offsets"
     annotation (Placement(transformation(extent={{52,-122},{72,-102}})));
   Modelica.Blocks.Interfaces.RealOutput FSRigth "Low speed swept path"

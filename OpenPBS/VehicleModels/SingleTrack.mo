@@ -2,7 +2,7 @@ within OpenPBS.VehicleModels;
 model SingleTrack
   "Single-track model for lateral dynamics of articulated vehicles"
   /* All length parameters positive forward */
-  parameter Parameters.Base.VehicleModel paramSet
+  parameter Vehicles.Base.VehicleModel paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 
   OpenPBS.VehicleModels.VerticalForces verticalForces(nu=nu,na=na,paramSet=paramSet);
