@@ -23,7 +23,7 @@ model SingleLaneChange
     annotation (Placement(transformation(extent={{-48,-40},{-68,-20}})));
   replaceable parameter OpenPBS.VehicleParameters.Vehicles.Adouble6x4 paramSet
     constrainedby OpenPBS.VehicleParameters.Base.VehicleModel
-    annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
+    annotation (Placement(transformation(extent={{-98,78},{-78,98}})));
   Blocks.PBS.RearWardAmplification rearWardAmplification(nu=paramSet.nu)
     annotation (Placement(transformation(extent={{20,60},{40,80}})));
   Blocks.PBS.Damping damping(nu=paramSet.nu, start_time=singlePeriodSine.startTime
