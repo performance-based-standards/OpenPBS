@@ -57,7 +57,12 @@ equation
           Bitmap(extent={{-100,-100},{100,100}}, fileName=
               "modelica://OpenPBS/Resources/illustrations/SingleLaneChange.png")}),
                                                                  Diagram(
-        coordinateSystem(preserveAspectRatio=false)),
+        coordinateSystem(preserveAspectRatio=false), graphics={Text(
+          extent={{60,80},{100,100}},
+          lineColor={238,46,47},
+          textString="Use YD from 
+SingleLaneChange
+instead")}),
     Documentation(info="<html>
 <p><b><span style=\"font-size: 20pt; color: #0000ff;\">RWA, Rearward Amplification</span></b></p>
 <p><img src=\"modelica://OpenPBS/Resources/illustrations/RWA_Description.png\"/></p>
