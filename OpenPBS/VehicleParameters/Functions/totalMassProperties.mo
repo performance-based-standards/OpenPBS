@@ -32,16 +32,16 @@ function totalMassProperties
 algorithm
   // Code code code
 
-  m_total :=m_chassis + m_payload;
+  m_total := m_chassis + m_payload;
 
-  cgx_total :=(m_chassis*cgx_chassis + m_payload*cgx_payload)/m_total;
-  cgz_total :=(m_chassis*cgz_chassis + m_payload*cgz_payload)/m_total;
+  cgx_total := (m_chassis*cgx_chassis + m_payload*cgx_payload)/m_total;
+  cgz_total := (m_chassis*cgz_chassis + m_payload*cgz_payload)/m_total;
 
-  Izz_total :=Izz_chassis + Izz_payload + m_chassis*(cgx_chassis - cgx_total)^2 +
-    m_payload*(cgx_payload - cgx_payload)^2;
-  Ixx_total :=Ixx_chassis + Ixx_payload + m_chassis*(cgz_chassis - cgz_total)^2 +
-    m_payload*(cgz_payload - cgz_payload)^2;
-  Iyy_total :=Iyy_chassis + Iyy_payload + m_chassis*(cgx_chassis - cgx_total)^2 +
-    m_payload*(cgx_payload - cgx_payload)^2;
+  Izz_total := Izz_chassis + Izz_payload + m_chassis*(cgx_chassis - cgx_total)^
+    2 + m_payload*(cgx_payload - cgx_payload)^2;
+  Ixx_total := Ixx_chassis + Ixx_payload + m_chassis*(cgz_chassis - cgz_total)^
+    2 + m_payload*(cgz_payload - cgz_payload)^2;
+  Iyy_total := Iyy_chassis + Iyy_payload + m_chassis*(cgx_chassis - cgx_total)^
+    2 + m_payload*(cgx_payload - cgx_payload)^2;
 
 end totalMassProperties;

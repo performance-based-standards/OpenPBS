@@ -6,8 +6,8 @@ function axlePositions "Calculate axle positions relative first axle"
 
   output Modelica.SIunits.Position L[na];
 algorithm
-  L[1]:=0;
+  L[1] := 0;
   for i in 2:na loop
-    L[i]:=L[i - 1] - wheelbase[i - 1];
+    L[i] := L[i - 1] - wheelbase[i - 1];
   end for;
 end axlePositions;

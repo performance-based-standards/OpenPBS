@@ -61,5 +61,6 @@ equation
   connect(booleanConstant.y, valid)
     annotation (Line(points={{81,-60},{110,-60}}, color={255,0,255}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
-        coordinateSystem(preserveAspectRatio=false)));
+        coordinateSystem(preserveAspectRatio=false)),
+    experiment);
 end HighSpeedCurve;

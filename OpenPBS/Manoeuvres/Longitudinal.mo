@@ -72,5 +72,6 @@ equation
   connect(AC, derivative.y)
     annotation (Line(points={{110,-30},{91,-30}}, color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
-        coordinateSystem(preserveAspectRatio=false)));
+        coordinateSystem(preserveAspectRatio=false)),
+    experiment(StopTime=20));
 end Longitudinal;

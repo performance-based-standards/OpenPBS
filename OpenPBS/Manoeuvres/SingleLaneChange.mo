@@ -87,5 +87,6 @@ equation
     Documentation(info="<html>
 <p><b><span style=\"font-size: 20pt; color: #0000ff;\">HSTO, High Speed Transient Off Tracking</span></b></p>
 <p><img src=\"modelica://OpenPBS/Resources/illustrations/HSTO_Description.png\"/></p>
-</html>"));
+</html>"),
+    experiment(StopTime=15));
 end SingleLaneChange;

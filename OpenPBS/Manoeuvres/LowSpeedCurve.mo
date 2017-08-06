@@ -114,7 +114,7 @@ model LowSpeedCurve
         extent={{4,-4},{-4,4}},
         rotation=90,
         origin={54,-84})));
-  Modelica.Blocks.Interfaces.RealOutput FS "Front Swing(rigth side)"
+  Modelica.Blocks.Interfaces.RealOutput TS "Tail Swing(rigth side)"
     annotation (Placement(transformation(extent={{100,-72},{120,-52}})));
   Modelica.Blocks.Interfaces.RealOutput RS "Rear swing(rigth side)"
     annotation (Placement(transformation(extent={{100,-92},{120,-72}})));
@@ -201,7 +201,7 @@ equation
   connect(realExpression12.y,overHangCalculatorRigth. pz) annotation (Line(points={{-79,-96},
           {-58,-96},{-24,-96},{-24,-88},{-14,-88},{-14,-85.4},{22.2,-85.4}},
                    color={0,0,127}));
-  connect(rollingMax4.y, FS) annotation (Line(points={{83,-54},{86,-54},{86,-62},
+  connect(rollingMax4.y,TS)  annotation (Line(points={{83,-54},{86,-54},{86,-62},
           {110,-62}}, color={0,0,127}));
   connect(rollingMax5.y, RS)
     annotation (Line(points={{87,-88},{87,-82},{110,-82}}, color={0,0,127}));

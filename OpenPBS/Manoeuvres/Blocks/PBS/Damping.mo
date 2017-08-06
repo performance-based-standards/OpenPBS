@@ -18,9 +18,11 @@ model Damping
   Modelica.Blocks.Interfaces.RealInput motion[nu]
     "Lateral acceleration or yaw rate"
     annotation (Placement(transformation(extent={{-140,-20},{-100,20}})));
-  Modelica.Blocks.Logical.ZeroCrossing zeroCrossing(u=der(motion[end]),enable=time>start_time);
+  Modelica.Blocks.Logical.ZeroCrossing zeroCrossing(enable=time>start_time)
+      annotation (Placement(transformation(extent={{-26,-50},{-6,-30}})));
 
 equation
+  zeroCrossing.u=der(motion[end]);
   when {zeroCrossing.y} then
       for i in 1:npeaks loop
         if (i==pre(ipeak)) then
