@@ -22,7 +22,7 @@ model SingleSineSteering
   Blocks.PBS.Damping damping(nu=paramSet.nu, start_time=singlePeriodSine.startTime
          + 1/singlePeriodSine.freqHz)
     annotation (Placement(transformation(extent={{20,20},{40,40}})));
-  Modelica.Blocks.Interfaces.RealOutput RWA "Rearward amplification"
+  Modelica.Blocks.Interfaces.RealOutput RWA "RearWard Amplification"
     annotation (Placement(transformation(extent={{100,50},{120,70}})));
   Modelica.Blocks.Interfaces.RealOutput YD "Yaw damping"
     annotation (Placement(transformation(extent={{100,10},{120,30}})));
@@ -36,8 +36,8 @@ equation
   connect(velocitySource.y,vehicle. vx_in) annotation (Line(points={{-79,-30},{-60,
           -30},{-60,-6},{-38,-6}},
                                  color={0,0,127}));
-  connect(rearWardAmplification.RWA, RWA) annotation (Line(points={{41,75},{62,75},
-          {62,74},{82,74},{82,60},{110,60}}, color={0,0,127}));
+  connect(rearWardAmplification.RWA, RWA) annotation (Line(points={{41,75},{62,
+          75},{62,74},{82,74},{82,60},{110,60}}, color={0,0,127}));
   connect(damping.D, YD) annotation (Line(points={{41,35},{80,35},{80,20},{110,20}},
         color={0,0,127}));
   connect(damping.motion, vehicle.wz_out) annotation (Line(points={{18,30},{4,30},
