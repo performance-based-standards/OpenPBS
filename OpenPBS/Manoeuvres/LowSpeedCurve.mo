@@ -118,21 +118,8 @@ model LowSpeedCurve
     annotation (Placement(transformation(extent={{100,-72},{120,-52}})));
   Modelica.Blocks.Interfaces.RealOutput RS "Rear swing(rigth side)"
     annotation (Placement(transformation(extent={{100,-92},{120,-72}})));
-  Blocks.PBS.FrictionDemand frictionDemand(
-    nu=nu,
-    na=na,
-    driven=paramSet.driven,
-    max_friction=max_friction)
-    annotation (Placement(transformation(extent={{40,28},{60,48}})));
-  Modelica.Blocks.Sources.RealExpression realExpression1[nu,
-    na](y=vehicle.vehicle.friction_usage)
-    annotation (Placement(transformation(extent={{10,28},{30,48}})));
   parameter Real max_friction=0.8
     "Maximum allowed friction (for friction demand calculation)";
-  Modelica.Blocks.Interfaces.RealOutput FDST "Friction demand on steer tyres"
-    annotation (Placement(transformation(extent={{100,34},{120,54}})));
-  Modelica.Blocks.Interfaces.RealOutput FDDT "Friction demand on drive tyres"
-    annotation (Placement(transformation(extent={{100,14},{120,34}})));
 equation
   connect(pathPositionRight.s_out, curve90deg.u) annotation (Line(points={{-3,-7},
           {18,-7},{18,14},{12,14}},        color={0,0,127}));
@@ -213,12 +200,6 @@ equation
     annotation (Line(points={{54,-88.4},{54,-88},{64,-88}},    color={0,0,127}));
   connect(gain1[:, 1].u,overHangCalculatorRigth [:, 1].n_out)
     annotation (Line(points={{52,-66.8},{52,-76},{45,-76}}, color={0,0,127}));
-  connect(realExpression1.y, frictionDemand.friction_usage)
-    annotation (Line(points={{31,38},{38,38}}, color={0,0,127}));
-  connect(frictionDemand.FDST, FDST) annotation (Line(points={{62,43},{82,43},{
-          82,44},{110,44}}, color={0,0,127}));
-  connect(frictionDemand.FDDT, FDDT) annotation (Line(points={{62,33},{82,33},{
-          82,24},{110,24}},                 color={0,0,127}));
   annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(
         coordinateSystem(preserveAspectRatio=false)),
     Documentation(info="<html>
@@ -245,5 +226,6 @@ equation
 </ul>
 <p><img src=\"modelica://OpenPBS/Resources/illustrations/LSSP_Description.png\"/></p>
 <p>￼</p>
-</html>"));
+</html>"),
+    experiment(StopTime=15));
 end LowSpeedCurve;

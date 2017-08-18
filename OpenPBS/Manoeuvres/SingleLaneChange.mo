@@ -83,7 +83,12 @@ equation
           Bitmap(extent={{-100,-100},{100,100}}, fileName=
               "modelica://OpenPBS/Resources/illustrations/SingleLaneChange.png")}),
                                                                  Diagram(
-        coordinateSystem(preserveAspectRatio=false)),
+        coordinateSystem(preserveAspectRatio=false), graphics={Text(
+          extent={{60,80},{100,100}},
+          lineColor={238,46,47},
+          textString="Use RWA from 
+SingleLaneChange 
+instead")}),
     Documentation(info="<html>
 <p><b><span style=\"font-size: 20pt; color: #0000ff;\">HSTO, High Speed Transient Off Tracking</span></b></p>
 <p><img src=\"modelica://OpenPBS/Resources/illustrations/HSTO_Description.png\"/></p>
