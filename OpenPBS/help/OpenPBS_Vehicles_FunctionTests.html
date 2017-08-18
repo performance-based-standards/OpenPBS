@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenPBS.Vehicles.FunctionTests</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; border: 1px solid #808080; vertical-align: top; }
+th      { padding: 2px; border: 1px solid #808080; vertical-align: top; font-weight: bold; }
+table   { border: 1px solid #808080; border-collapse: collapse; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE FunctionTests<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.FunctionTests"></a><a href="OpenPBS_Vehicles.html#OpenPBS.Vehicles"
+>OpenPBS.Vehicles</a>.FunctionTests</h2>
+<p>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Icons_UtilitiesPackage.html#Modelica.Icons.UtilitiesPackage"
+>Modelica.Icons.UtilitiesPackage</a> (Icon for utility packages).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenPBS.Vehicles.Functiond21e565d98b28f2aationS.png" alt="OpenPBS.Vehicles.FunctionTests.TestTwoUnits" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Vehicles_FunctionTests.html#OpenPBS.Vehicles.FunctionTests.TestTwoUnits"
+>TestTwoUnits</a>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE TestTwoUnits<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.FunctionTests.TestTwoUnits"></a><a href="OpenPBS_Vehicles_FunctionTests.html#OpenPBS.Vehicles.FunctionTests"
+>OpenPBS.Vehicles.FunctionTests</a>.TestTwoUnits</h2>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions.ModelParametersFromSpecification"
+>OpenPBS.Vehicles.Functions.ModelParametersFromSpecification</a>.</span></p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td>Integer</td><td>nu</td><td>2</td><td>Number of units</td></tr>
+<tr><td>Integer</td><td>na</td><td>&nbsp;</td><td>Number of axles (max over combination)</td></tr>
+<tr><td><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.UnitSpecification"
+>UnitSpecification</a></td><td>specification[nu]</td><td>{OpenPBS.Vehicles.Vehicles.F...</td><td>&nbsp;</td></tr>
+<tr><td>Real</td><td>weight_percentage[nu]</td><td>ones(nu)</td><td>Amount of payload max mass that is loaded</td></tr>
+<tr><td>Real</td><td>height_percentage[nu]</td><td>ones(nu)</td><td>Amount of payload max height that is used</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.VehicleModel"
+>VehicleModel</a></td><td>modelparameters</td><td>&nbsp;</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">function</span> TestTwoUnits
+  <span class="ModelicaKeyword">extends </span><a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions.ModelParametersFromSpecification"
+>OpenPBS.Vehicles.Functions.ModelParametersFromSpecification</a>(nu=2,
+      specification={<span class="ModelicaFunction">OpenPBS.Vehicles.Vehicles.FromRegistry.SLX394</span>(),
+        <span class="ModelicaFunction">OpenPBS.Vehicles.Vehicles.FromRegistry.CNC134</span>()});
+<span class="ModelicaKeyword">end </span>TestTwoUnits;
+</div>
+<hr>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Sun Jul 16 11:16:56 2017.
+</address>
+</body>
+</html>

@@ -1,5 +1,6 @@
 within OpenPBS.SandBox;
 model TestCurvatureSources
+
   Components.Curve90deg curve90deg
     annotation (Placement(transformation(extent={{-10,20},{10,40}})));
   Curve90deg2 curve90deg2_1

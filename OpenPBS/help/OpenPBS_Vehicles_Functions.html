@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OpenPBS.Vehicles.Functions</title>
+<meta name="HTML-Generator" content="Dymola">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+*       { font-size: 100%; font-family: Arial, sans-serif; }
+.modelica, .modelica * { font-size: 90%; font-family: Courier, monospace; white-space: pre; } /* For the Modelica code (in exported html). */
+h4      { font-size: 100%; font-weight: bold; color: green; } 
+h3      { font-size: 110%; font-weight: bold; color: green; }
+h2      { font-size: 130%; font-weight: bold; color: green; }
+address { font-weight: normal; }
+td      { padding: 2px; border: 1px solid #808080; vertical-align: top; }
+th      { padding: 2px; border: 1px solid #808080; vertical-align: top; font-weight: bold; }
+table   { border: 1px solid #808080; border-collapse: collapse; }
+pre, code {font-family: "Courier New", monospace;}
+pre {white-space: pre; overflow-x : hidden;}
+.ModelicaDescription {font-weight: bold;} /* For the description string of the class. */
+.ModelicaBaseClass {} /* For the list of base-classes at the of the description. */
+.ModelicaKeyword { color: blue; font-weight: normal; font-style: normal; } /* Keywords in Modelica. */
+.ModelicaComment { color: #006400;  font-weight: normal; font-style: normal;} /* All three variants of comments in Modelica.  */
+.ModelicaString { color: #006400;  font-weight: normal; font-style: normal;} /* String constants. */
+.ModelicaClass { color: red; font-weight: normal; font-style: normal;} /* Formatting the names of referenced classes (for base-class and components). */
+.ModelicaFunction { color: red; font-weight: normal; font-style: normal;} /* Formatting for called functions. */
+.ModelicaTablePackageContent { } /* The table of contents for each package. */
+.ModelicaTableCrossReference { } /* The optional cross-reference table. */
+.ModelicaTableInputs {} /* The table of inputs for a function. */
+.ModelicaTableOutputs {} /* The table of outputs for a function. */
+.ModelicaTableParameters {} /* The table of parameters for a model/block. */
+.ModelicaTableConnectors {} /* The table of connectors for a model/block. */
+.ModelicaTableContents {} /* The table of contents for a connector. */
+.ModelicaStartAttribute { font-weight: bold; } /* The formatting used for start-attribute in the table of parameters, to separate them from parameter values. */
+.ModelicaParameterTab { background-color: #c0c0c0; font-weight: bold; } /* The tab-heading in the table of parameters */
+.ModelicaParameterGroup { background-color: #e0e0e0; } /* The group-heading in the table of parameters */
+</style>
+</head>
+<body>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE Functions<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.Functions"></a><a href="OpenPBS_Vehicles.html#OpenPBS.Vehicles"
+>OpenPBS.Vehicles</a>.Functions</h2>
+<p>
+</p>
+<h3>Information</h3>
+<p><span class="ModelicaBaseClass">Extends from <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_Icons_VariantsPackage.html#Modelica.Icons.VariantsPackage"
+>Modelica.Icons.VariantsPackage</a> (Icon for package containing variants).</span></p>
+<h3>Package Content</h3>
+<table summary="Package Content" class="ModelicaTablePackageContent">
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+<tr>
+<td><img src="OpenPBS.Vehicles.Functiond21e565d98b28f2aationS.png" alt="OpenPBS.Vehicles.Functions.ModelParametersFromSpecification" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions.ModelParametersFromSpecification"
+>ModelParametersFromSpecification</a>
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><img src="OpenPBS.Vehicles.Functiond21e565d98b28f2aationS.png" alt="OpenPBS.Vehicles.Functions.totalMassProperties" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions.totalMassProperties"
+>totalMassProperties</a>
+</td>
+<td>Find total CG of a unit based on chassis and payload mass</td>
+</tr>
+<tr>
+<td><img src="OpenPBS.Vehicles.Functiond21e565d98b28f2aationS.png" alt="OpenPBS.Vehicles.Functions.payloadMassProperties" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions.payloadMassProperties"
+>payloadMassProperties</a>
+</td>
+<td>Payload mass properties from load size and distribution</td>
+</tr>
+<tr>
+<td><img src="OpenPBS.Vehicles.Functiond21e565d98b28f2aationS.png" alt="OpenPBS.Vehicles.Functions.axlePositions" width="20" height="20" align="top">&nbsp;<a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions.axlePositions"
+>axlePositions</a>
+</td>
+<td>Calculate axle positions relative first axle</td>
+</tr>
+</table>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE ModelParametersFromSpecification<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.Functions.ModelParametersFromSpecification"></a><a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions"
+>OpenPBS.Vehicles.Functions</a>.ModelParametersFromSpecification</h2>
+<h3>Information</h3>
+
+<p>erergAbce</p>
+
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td>Integer</td><td>nu</td><td>&nbsp;</td><td>Number of units</td></tr>
+<tr><td>Integer</td><td>na</td><td>&nbsp;</td><td>Number of axles (max over combination)</td></tr>
+<tr><td><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.UnitSpecification"
+>UnitSpecification</a></td><td>specification[nu]</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>Real</td><td>weight_percentage[nu]</td><td>ones(nu)</td><td>Amount of payload max mass that is loaded</td></tr>
+<tr><td>Real</td><td>height_percentage[nu]</td><td>ones(nu)</td><td>Amount of payload max height that is used</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.VehicleModel"
+>VehicleModel</a></td><td>modelparameters</td><td>&nbsp;</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">function</span> ModelParametersFromSpecification
+  <span class="ModelicaKeyword">input </span>Integer nu <span class="ModelicaComment">&quot;Number of units&quot;</span>;
+  <span class="ModelicaKeyword">input </span>Integer na <span class="ModelicaComment">&quot;Number of axles (max over combination)&quot;</span>;
+  <span class="ModelicaKeyword">input </span><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.UnitSpecification"
+>OpenPBS.Vehicles.Base.UnitSpecification</a> specification[nu];
+
+  <span class="ModelicaKeyword">input </span>Real[nu] weight_percentage=<span class="ModelicaFunction">ones</span>(nu)
+    <span class="ModelicaComment">&quot;Amount of payload max mass that is loaded&quot;</span>;
+  <span class="ModelicaKeyword">input </span>Real[nu] height_percentage=<span class="ModelicaFunction">ones</span>(nu)
+    <span class="ModelicaComment">&quot;Amount of payload max height that is used&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="OpenPBS_Vehicles_Base.html#OpenPBS.Vehicles.Base.VehicleModel"
+>OpenPBS.Vehicles.Base.VehicleModel</a> modelparameters;
+
+<span class="ModelicaKeyword">protected </span>
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> load_height[nu];
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> m_payload, m_total;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgx_payload, cgz_payload, cgx_total, cgz_total;
+  <a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Izz_payload, Ixx_payload, Iyy_payload, Izz_total, Ixx_total, Iyy_total;
+<span class="ModelicaKeyword">algorithm </span>
+ <span class="ModelicaComment">// Code to find model parameters from vehicle specification</span>
+  modelparameters.nu:=nu;
+  modelparameters.na:=na;
+
+  <span class="ModelicaKeyword">for </span>i<span class="ModelicaKeyword"> in </span>1:nu<span class="ModelicaKeyword"> loop</span>
+    modelparameters.L[i,:] :=<span class="ModelicaFunction">axlePositions</span>(specification[i].n_axles,  specification[i].wheelbase);
+    modelparameters.w[i,1:specification[i].n_axles] := specification[i].axle_width;
+    modelparameters.X[i] := specification[i].cg_x_location_unloaded;
+
+    load_height[i] :=specification[i].max_load_height - specification[i].chassis_height;
+
+    (m_payload, cgx_payload, cgz_payload, Izz_payload, Ixx_payload, Iyy_payload) :=
+      <span class="ModelicaFunction">payloadMassProperties</span>(specification[i].max_payload_mass, specification[i].max_load_height, specification[i].load_space_length, specification[i].width, 1, weight_percentage[i], height_percentage[i]);
+
+    (m_total,cgx_total,cgz_total,Izz_total,Ixx_total,Iyy_payload) :=<span class="ModelicaFunction">totalMassProperties</span>(specification[i].kerb_mass, specification[i].max_payload_mass, specification[i].cg_x_location_unloaded, specification[i].cg_z_location_unloaded, cgx_payload, cgz_payload, specification[i].yaw_inertia_unloaded, specification[i].roll_inertia_unloaded, specification[i].pitch_inertia_unloaded, Izz_payload, Ixx_payload, Iyy_payload);
+    modelparameters.m[i] :=m_total;
+    modelparameters.I[i] :=Izz_total;
+    modelparameters.cgh[i] :=cgz_total;
+    modelparameters.X[i] :=cgx_total;
+
+    modelparameters.axlegroups[i,:]:=(specification[i].axle_groups);
+
+  <span class="ModelicaKeyword">end for</span>;
+<span class="ModelicaComment">//   modelparameters.na:=size(modelparameters.L, 2);</span>
+<span class="ModelicaKeyword">end </span>ModelParametersFromSpecification;
+</div>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE totalMassProperties<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.Functions.totalMassProperties"></a><a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions"
+>OpenPBS.Vehicles.Functions</a>.totalMassProperties</h2>
+<p>
+<span class="ModelicaDescription">Find total CG of a unit based on chassis and payload mass</span>
+</p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>m_chassis</td><td>&nbsp;</td><td>[kg]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>m_payload</td><td>&nbsp;</td><td>[kg]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgx_chassis</td><td>&nbsp;</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgz_chassis</td><td>&nbsp;</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgx_payload</td><td>&nbsp;</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgz_payload</td><td>&nbsp;</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Izz_chassis</td><td>&nbsp;</td><td>Total yaw inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Ixx_chassis</td><td>&nbsp;</td><td>Total roll inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Iyy_chassis</td><td>&nbsp;</td><td>Total pitch inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Izz_payload</td><td>&nbsp;</td><td>Total yaw inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Ixx_payload</td><td>&nbsp;</td><td>Total roll inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Iyy_payload</td><td>&nbsp;</td><td>Total pitch inertia of load around c.g. [kg.m2]</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>m_total</td><td>[kg]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgx_total</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgz_total</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Izz_total</td><td>Total yaw inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Ixx_total</td><td>Total roll inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Iyy_total</td><td>Total pitch inertia of load around c.g. [kg.m2]</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">function</span> totalMassProperties
+  <span class="ModelicaComment">&quot;Find total CG of a unit based on chassis and payload mass&quot;</span>
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> m_chassis;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> m_payload;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgx_chassis;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgz_chassis;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgx_payload;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgz_payload;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Izz_chassis
+    <span class="ModelicaComment">&quot;Total yaw inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Ixx_chassis
+    <span class="ModelicaComment">&quot;Total roll inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Iyy_chassis
+    <span class="ModelicaComment">&quot;Total pitch inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Izz_payload
+    <span class="ModelicaComment">&quot;Total yaw inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Ixx_payload
+    <span class="ModelicaComment">&quot;Total roll inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Iyy_payload
+    <span class="ModelicaComment">&quot;Total pitch inertia of load around c.g.&quot;</span>;
+
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> m_total;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgx_total;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgz_total;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Izz_total
+    <span class="ModelicaComment">&quot;Total yaw inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Ixx_total
+    <span class="ModelicaComment">&quot;Total roll inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Iyy_total
+    <span class="ModelicaComment">&quot;Total pitch inertia of load around c.g.&quot;</span>;
+<span class="ModelicaKeyword">algorithm </span>
+  <span class="ModelicaComment">// Code code code</span>
+
+  m_total :=m_chassis + m_payload;
+
+  cgx_total :=(m_chassis*cgx_chassis + m_payload*cgx_payload)/m_total;
+  cgz_total :=(m_chassis*cgz_chassis + m_payload*cgz_payload)/m_total;
+
+  Izz_total :=Izz_chassis + Izz_payload + m_chassis*(cgx_chassis - cgx_total)^2 +
+    m_payload*(cgx_payload - cgx_payload)^2;
+  Ixx_total :=Ixx_chassis + Ixx_payload + m_chassis*(cgz_chassis - cgz_total)^2 +
+    m_payload*(cgz_payload - cgz_payload)^2;
+  Iyy_total :=Iyy_chassis + Iyy_payload + m_chassis*(cgx_chassis - cgx_total)^2 +
+    m_payload*(cgx_payload - cgx_payload)^2;
+
+<span class="ModelicaKeyword">end </span>totalMassProperties;
+</div>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE payloadMassProperties<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.Functions.payloadMassProperties"></a><a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions"
+>OpenPBS.Vehicles.Functions</a>.payloadMassProperties</h2>
+<p>
+<span class="ModelicaDescription">Payload mass properties from load size and distribution</span>
+</p>
+<h3>Information</h3>
+
+<p><img src="file:///D:/Users/bengtja.NET/Documents/GitHub/OpenPBS/OpenPBS/Resources/illustrations/payload.png"/></p>
+
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>max_mass</td><td>30000</td><td>Max allowed mass [kg]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>load_height</td><td>3</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>load_length</td><td>10</td><td>[m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>load_width</td><td>2.5</td><td>[m]</td></tr>
+<tr><td>Integer</td><td>distribution</td><td>1</td><td>&nbsp;</td></tr>
+<tr><td>Real</td><td>weight_percentage</td><td>1.0</td><td>&nbsp;</td></tr>
+<tr><td>Real</td><td>height_percentage</td><td>1.0</td><td>&nbsp;</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Mass</a></td><td>m</td><td>Total mass of load [kg]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgx</td><td>C.g. X location relative to front edge of load [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>cgz</td><td>C.g. Z location relative to bottom of load [m]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Izz</td><td>Yaw inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Ixx</td><td>Roll inertia of load around c.g. [kg.m2]</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Inertia</a></td><td>Iyy</td><td>Pitch inertia of load around c.g. [kg.m2]</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">function</span> payloadMassProperties
+  <span class="ModelicaComment">&quot;Payload mass properties from load size and distribution&quot;</span>
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> max_mass=30000 <span class="ModelicaComment">&quot;Max allowed mass&quot;</span>;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> load_height=3;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> load_length=10;
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> load_width=2.5;
+  <span class="ModelicaKeyword">input </span>Integer distribution=1;
+  <span class="ModelicaKeyword">input </span>Real weight_percentage=1.0;
+  <span class="ModelicaKeyword">input </span>Real height_percentage=1.0;
+
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Mass"
+>Modelica.SIunits.Mass</a> m <span class="ModelicaComment">&quot;Total mass of load&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgx
+    <span class="ModelicaComment">&quot;C.g. X location relative to front edge of load&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> cgz
+    <span class="ModelicaComment">&quot;C.g. Z location relative to bottom of load&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Izz <span class="ModelicaComment">&quot;Yaw inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Ixx <span class="ModelicaComment">&quot;Roll inertia of load around c.g.&quot;</span>;
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Inertia"
+>Modelica.SIunits.Inertia</a> Iyy <span class="ModelicaComment">&quot;Pitch inertia of load around c.g.&quot;</span>;
+<span class="ModelicaKeyword">algorithm </span>
+  m :=weight_percentage*max_mass;
+
+  <span class="ModelicaKeyword">if </span>distribution==1<span class="ModelicaKeyword"> then</span>
+    <span class="ModelicaComment">// Rectangular load</span>
+    cgx :=load_length/2;
+    cgz :=load_height*height_percentage/2;
+
+    Izz :=m/12*(load_length^2 + load_width^2);
+    Ixx :=m/12*((load_height*height_percentage)^2 + load_width^2);
+    Iyy :=m/12*((load_height*height_percentage)^2 + load_length^2);
+  <span class="ModelicaKeyword">else</span>
+    <span class="ModelicaComment">// Triangular load</span>
+  <span class="ModelicaKeyword">end if</span>;
+
+<span class="ModelicaKeyword">end </span>payloadMassProperties;
+</div>
+<hr>
+<!--[if supportFields]><span style="mso-element:field-begin"></span>
+<span style="mso-spacerun:yes"></span>XE axlePositions<![endif]-->
+<!--[if supportFields]><span style="mso-element:field-end"></span><![endif]-->
+<h2><a name="OpenPBS.Vehicles.Functions.axlePositions"></a><a href="OpenPBS_Vehicles_Functions.html#OpenPBS.Vehicles.Functions"
+>OpenPBS.Vehicles.Functions</a>.axlePositions</h2>
+<p>
+<span class="ModelicaDescription">Calculate axle positions relative first axle</span>
+</p>
+<h3>Inputs</h3>
+<table summary="Inputs" class="ModelicaTableInputs">
+<tr><th>Type</th><th>Name</th><th>Default</th><th>Description</th></tr>
+<tr><td>Integer</td><td>na</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Length</a></td><td>wheelbase[na]</td><td>&nbsp;</td><td>[m]</td></tr>
+</table>
+<h3>Outputs</h3>
+<table summary="Outputs" class="ModelicaTableOutputs">
+<tr><th>Type</th><th>Name</th><th>Description</th></tr>
+<tr><td><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Position</a></td><td>L[na]</td><td>[m]</td></tr>
+</table>
+<h3>Modelica definition</h3>
+<div class="modelica"><span class="ModelicaKeyword">function</span> axlePositions <span class="ModelicaComment">&quot;Calculate axle positions relative first axle&quot;</span>
+  <span class="ModelicaKeyword">input </span>Integer na;
+
+  <span class="ModelicaKeyword">input </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Length"
+>Modelica.SIunits.Length</a> wheelbase[na];
+
+  <span class="ModelicaKeyword">output </span><a href="file:///C:/Program%20Files%20(x86)/Dymola%202018/Modelica/Library/Modelica%203.2.2/help/Modelica_SIunits.html#Modelica.SIunits.Position"
+>Modelica.SIunits.Position</a> L[na];
+<span class="ModelicaKeyword">algorithm </span>
+  L[1]:=0;
+  <span class="ModelicaKeyword">for </span>i<span class="ModelicaKeyword"> in </span>2:na<span class="ModelicaKeyword"> loop</span>
+    L[i]:=L[i - 1] - wheelbase[i - 1];
+  <span class="ModelicaKeyword">end for</span>;
+<span class="ModelicaKeyword">end </span>axlePositions;
+</div>
+<hr>
+<address>
+<a href="http://www.3ds.com/">Automatically generated</a> Sun Jul 16 11:16:56 2017.
+</address>
+</body>
+</html>

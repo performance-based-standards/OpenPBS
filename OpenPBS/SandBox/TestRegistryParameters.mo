@@ -1,16 +1,16 @@
 within OpenPBS.SandBox;
 model TestRegistryParameters
-  extends PBS.LowSpeedCurve(final paramSet=
-    OpenPBS.Parameters.Functions.ModelParametersFromSpecification(
-      nu=2,
-      na=3,
-      specification={
-      tractorParam,
-      semitrailerParam}), vehicle(paramSet=paramSet),
+  extends Manoeuvres.LowSpeedCurve(
+    final paramSet=
+        OpenPBS.VehicleParameters.Functions.ModelParametersFromSpecification(
+        nu=2,
+        na=3,
+        specification={tractorParam,semitrailerParam}),
+    vehicle(paramSet=paramSet),
     nu=2,
     na=3);
-  parameter Parameters.Variants.FromRegistry.SLX394 tractorParam
+  parameter VehicleParameters.Vehicles.FromRegistry.SLX394 tractorParam
     annotation (Placement(transformation(extent={{-138,64},{-118,84}})));
-  parameter Parameters.Variants.FromRegistry.CNC134 semitrailerParam
+  parameter VehicleParameters.Vehicles.FromRegistry.CNC134 semitrailerParam
     annotation (Placement(transformation(extent={{-138,42},{-118,62}})));
 end TestRegistryParameters;

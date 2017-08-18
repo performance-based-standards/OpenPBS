@@ -1,6 +1,6 @@
-within OpenPBS.Components;
+﻿within OpenPBS.Components;
 block Curve90deg
-  "Output curvature as a function of path length for a 90� curve"
+  "Output curvature as a function of path length for a 90° curve"
   extends Modelica.Blocks.Interfaces.SISO;
   parameter Modelica.SIunits.Length radius=12.5 "Curve radius";
   parameter Modelica.SIunits.Position s_start=50
@@ -11,7 +11,7 @@ equation
     curvature = 0;
   elsewhen u>s_start then
     curvature = 1/radius;
-  elsewhen u>s_start+radius*Modelica.Constants.pi/2 then
+  elsewhen u>s_start+radius*Modelica.Constants.pi then
     curvature = 0;
   end when;
   y = smooth(2,curvature);
