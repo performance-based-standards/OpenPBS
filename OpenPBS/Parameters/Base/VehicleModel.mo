@@ -1,4 +1,4 @@
-within OpenPBS.Parameters.Base;
+﻿within OpenPBS.Parameters.Base;
 record VehicleModel "Base vehicle model parameter set"
   extends Modelica.Icons.Record;
   parameter Integer nu=2 "Number of units";
@@ -44,18 +44,18 @@ record VehicleModel "Base vehicle model parameter set"
 </html>"));
 
 
-  // Ber�knade indata
-// Axel/boggitryck i kopplad kombination - Ber�knas i simulering, VerticalForces
-// Kopplingstryck - Ber�knas i simulering, VerticalForces
-// Tyngdpunktsh�jd - cgh
-// Resulterande tyngdpunktsh�jd - ?
-// Sp�rvidd - w
-// Resulterande sp�rvidd - ?
-// Kopplingsavst�nd EU till fr�mre koppling
-// Kopplingsavst�nd EU till bakre koppling
-// Tr�ghetsmoment - I (yaw)
+  // Beräknade indata
+// Axel/boggitryck i kopplad kombination - Beräknas i simulering, VerticalForces
+// Kopplingstryck - Beräknas i simulering, VerticalForces
+// Tyngdpunktshöjd - cgh
+// Resulterande tyngdpunktshöjd - ?
+// Spårvidd - w
+// Resulterande spårvidd - ?
+// Kopplingsavstånd EU till främre koppling
+// Kopplingsavstånd EU till bakre koppling
+// Tröghetsmoment - I (yaw)
 // Tyngdpunktsposition rel. axel 1 - X
-// Fr�mre kopplingsposition rel. axel 1 - A
+// Främre kopplingsposition rel. axel 1 - A
 // Bakre kopplingsposition rel.axel 1 - B
 // Axelposition rel. axel 1 - L
 // Modifieringsfaktor
