@@ -8,18 +8,15 @@ model TestRegistryParameters2
     nu=2,
     na=3)
     annotation (Placement(transformation(extent={{20,-38},{40,-18}})));
-  parameter       Parameters.Base.VehicleModel
-                                       paramSet=
-    OpenPBS.Parameters.Functions.ModelParametersFromSpecification(
+  parameter VehicleParameters.Base.VehicleModel paramSet=
+      OpenPBS.VehicleParameters.Functions.ModelParametersFromSpecification(
       nu=2,
       na=3,
-      specification={
-      tractorParam,
-      semitrailerParam})
+      specification={tractorParam,semitrailerParam})
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
-  parameter Parameters.Variants.FromRegistry.SLX394 tractorParam
+  parameter VehicleParameters.Vehicles.FromRegistry.SLX394 tractorParam
     annotation (Placement(transformation(extent={{-138,64},{-118,84}})));
-  parameter Parameters.Variants.FromRegistry.CNC134 semitrailerParam
+  parameter VehicleParameters.Vehicles.FromRegistry.CNC134 semitrailerParam
     annotation (Placement(transformation(extent={{-138,42},{-118,62}})));
   Modelica.Blocks.Sources.Constant const1(k=0)
     annotation (Placement(transformation(extent={{-60,-20},{-40,0}})));

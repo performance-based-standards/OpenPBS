@@ -1,5 +1,6 @@
 within OpenPBS.SandBox;
 model TestCausal2
+
   Modelica.Blocks.Sources.Constant const(k=1)
     annotation (Placement(transformation(extent={{-80,-40},{-60,-20}})));
   VehicleModels.DirectionInput curvatureInput

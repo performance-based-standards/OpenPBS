@@ -35,7 +35,7 @@ equation
   connect(vehicle.vx_in, vx_in) annotation (Line(points={{22,-6},{40,-6},{
           40,-50},{-120,-50}}, color={0,0,127}));
   connect(vehicle.ay_out[1, 1], inverseBlockConstraints.u2) annotation (
-      Line(points={{-1,-6},{-2,-6},{-2,0},{-6,0}}, color={0,0,127}));
+      Line(points={{-1,-5},{-2,-5},{-2,0},{-6,0}}, color={0,0,127}));
   annotation (Diagram(coordinateSystem(preserveAspectRatio=false, extent={{-100,
             -100},{100,100}})));
 end AccInput;
