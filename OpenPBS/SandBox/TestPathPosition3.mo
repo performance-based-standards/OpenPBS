@@ -22,7 +22,7 @@ model TestPathPosition3
   Modelica.Blocks.Sources.RealExpression realExpression2(y=vehicle.pz[1] -
         pathPosition.pp)
     annotation (Placement(transformation(extent={{-4,0},{16,20}})));
-  inner Parameters.Variants.Adouble6x4 paramSet
+  inner VehicleParameters.Vehicles.Adouble6x4 paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 equation
   connect(realExpression.y, pathPosition.vy)

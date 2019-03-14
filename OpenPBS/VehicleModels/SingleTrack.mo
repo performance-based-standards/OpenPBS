@@ -2,7 +2,7 @@ within OpenPBS.VehicleModels;
 model SingleTrack
   "Single-track model for lateral dynamics of articulated vehicles"
   /* All length parameters positive forward */
-  parameter Parameters.Base.VehicleModel paramSet
+  parameter VehicleParameters.Base.VehicleModel paramSet
     annotation (Placement(transformation(extent={{-100,80},{-80,100}})));
 
   OpenPBS.VehicleModels.VerticalForces verticalForces(nu=nu,na=na,paramSet=paramSet);
@@ -151,7 +151,7 @@ equation
 
         d_wz=zeros(nu);
 
-         d_theta=der(theta);
+        d_theta=der(theta);
     else
         d_vx=zeros(nu);
 
